@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faWhatsapp, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import ImgPrefil from '../../assets/foto-perfil.png';
+import { SectionStart } from '../style/startstyle';
 
 export const StartComponents = () => {
     return (
-        <section>
+        <SectionStart>
             <div>
                 <p>Olá 🖖,</p>
                 <h1>Sou o Humberto Ribeiro</h1>
@@ -21,6 +22,6 @@ export const StartComponents = () => {
                     <img src={ImgPrefil} alt='Foto de Perfil' />
                 </div>
             </div>
-        </section>
+        </SectionStart>
     );
 };
