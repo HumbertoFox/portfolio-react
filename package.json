@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -29,6 +29,6 @@
     "vite": "^5.3.4"
   },
   "keywords": [],
-  "author": "BetoFoxNet_info",
+  "author": "BetoFoxNet_Info",
   "license": "ISC"
 }
