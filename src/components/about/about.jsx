@@ -23,7 +23,7 @@ export const AboutComponents = () => {
                             Ah, gosto de jogos, filmes, séries, animes e outras nerdices. 💜
                         </p>
                         <div>
-                            <a href='/' aria-label='Bottão para curriculum' target='_blank' rel='noopener'>
+                            <a href='./src/assets/file/cv.pdf' aria-label='Botão para curriculum' target='_blank' rel='noopener'>
                                 <span>Veja meu CV</span>
                             </a>
                         </div>
