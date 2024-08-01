@@ -50,21 +50,13 @@ const DivTextImgAbout = styled.div`
     }
 `;
 
-const DivDivImgAbout = styled.div`
-    max-width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    border-radius: 15px;
-`;
-
 const DivImgAbout = styled.div`
+    max-width: 90%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #000;
     padding: 2px;
     border-radius: 5px;
     overflow: hidden;
@@ -142,4 +134,4 @@ const DivLinkTextAbout = styled.div`
     }
 `;
 
-export { SectionAbout, DivTextImgAbout, DivDivImgAbout, DivImgAbout, DivTextAbout, DivLinkTextAbout };
+export { SectionAbout, DivTextImgAbout, DivImgAbout, DivTextAbout, DivLinkTextAbout };

@@ -130,7 +130,8 @@ const DivStartImg = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3px;
+    background-color: #000;
+    padding: 2px;
     border-radius: 100%;
     overflow: hidden;
     &::before {
@@ -140,7 +141,6 @@ const DivStartImg = styled.div`
         content: '';
         background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
         animation: ${anime} 4s linear infinite;
-        z-index: -1;
     }
     &::after {
         width: 130%;
@@ -150,7 +150,6 @@ const DivStartImg = styled.div`
         background: repeating-conic-gradient(#FF2770 0%, #FF2770 5%, #FF2770 10%, transparent 5%, transparent 40%, #FF2770 50%);
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
-        z-index: -1;
     }
 `;
 
@@ -158,6 +157,7 @@ const PerfilImg = styled.img`
     width: 100%;
     background-color: #282828;
     border-radius: 100%;
+    z-index: 1;
 `;
 
 export { SectionStart, SectionDivStartText, DivStartSocial, SectionDivStartImg, DivStartImg, PerfilImg };

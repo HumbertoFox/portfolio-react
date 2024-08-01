@@ -1,16 +1,14 @@
 import ImgPerfil from '../../assets/foto-perfilCF.png';
-import { DivDivImgAbout, DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
+import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
 
 export const AboutComponents = () => {
     return (
         <SectionAbout id='about_me'>
             <h3>Sobre mim</h3>
             <DivTextImgAbout>
-                <DivDivImgAbout>
-                    <DivImgAbout>
-                        <img src={ImgPerfil} alt='foto sobre mim' />
-                    </DivImgAbout>
-                </DivDivImgAbout>
+                <DivImgAbout>
+                    <img src={ImgPerfil} alt='foto sobre mim' />
+                </DivImgAbout>
                 <DivTextAbout>
                     <p>
                         <strong>Olá! Me chamo Humberto Ribeiro e sou um desenvolvedor Full-Stack em formação! 📚</strong>

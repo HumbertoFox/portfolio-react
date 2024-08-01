@@ -76,6 +76,7 @@ const LinkLogo = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #000;
     padding: 2px;
     border-radius: 15px;
     overflow: hidden;
@@ -86,7 +87,6 @@ const LinkLogo = styled.a`
         content: '';
         background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
         animation: ${anime} 4s linear infinite;
-        z-index: -1;
         border-radius: 15px;
     }
     &::after {
@@ -97,7 +97,6 @@ const LinkLogo = styled.a`
         background: repeating-conic-gradient(#FF2770 0%, #FF2770 5%, #FF2770 10%, transparent 5%, transparent 40%, #FF2770 50%);
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
-        z-index: -1;
         border-radius: 15px;
     }
     &:hover::before,
@@ -110,6 +109,7 @@ const LogoImg = styled.img`
     width: 100%;
     background-color: #282828;
     border-radius: 15px;
+    z-index: 1;
 `;
 
 const NavHeader = styled.nav`
