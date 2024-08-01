@@ -41,7 +41,7 @@ const animateIcons = keyframes`
 `;
 
 const SectionStart = styled.section`
-    min-height: 78vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,6 +62,7 @@ const SectionDivStartText = styled.div`
     animation: ${rightAnime} .8s ease-in-out both;
     @media (max-width: 900px) {
         align-items: center;
+        text-align: center;
     }
 
     h2,
@@ -140,7 +141,6 @@ const DivStartImg = styled.div`
         background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
         animation: ${anime} 4s linear infinite;
         z-index: -1;
-        border-radius: 15px;
     }
     &::after {
         width: 130%;
@@ -151,7 +151,6 @@ const DivStartImg = styled.div`
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
         z-index: -1;
-        border-radius: 15px;
     }
 `;
 

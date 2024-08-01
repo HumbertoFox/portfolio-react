@@ -1,7 +1,7 @@
 import { MainPage } from '../components/style/pagestyle';
 import { HeaderComponents } from '../components/header';
 import { StartComponents } from '../components/start';
-import { AboutComponents } from '../components/about/about';
+import { AboutComponents } from '../components/about';
 
 export const AppPage = () => {
     return (

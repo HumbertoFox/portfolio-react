@@ -1,5 +1,14 @@
 import styled, { keyframes } from "styled-components";
 
+const anime = keyframes`
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+`;
+
 const gradient = keyframes`
     0% {
         background-position: 0% 50%;
@@ -12,115 +21,100 @@ const gradient = keyframes`
     }
 `;
 
-const anime = keyframes`
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-`;
-
-const headerAnim = keyframes`
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(-250px);
-	}
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
-	}
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-65px);
-	}
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-28px);
-	}
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-8px);
-	}
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-`;
-
-const Header = styled.header`
+const SectionAbout = styled.section`
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans serif;
+    color: #FFF;
+
+    h3 {
+        align-self: center;
+        font-size: 2.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: default;
+    }
+`;
+
+const DivTextImgAbout = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px;
-    animation: ${headerAnim} 2s ease 0s 1 normal forwards;
+    gap: 25px;
+    padding: 0 15px;
     @media (max-width: 900px) {
-        flex-direction: row-reverse;
+        flex-direction: column;
+        text-align: center;
     }
 `;
 
-const LinkLogo = styled.a`
-    width: 110px;
+const DivDivImgAbout = styled.div`
+    max-width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border-radius: 15px;
+`;
+
+const DivImgAbout = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2px;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
     &::before {
-        width: 130%;
-        height: 130%;
+        width: 150%;
+        height: 150%;
         position: absolute;
         content: '';
         background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
         animation: ${anime} 4s linear infinite;
-        z-index: -1;
-        border-radius: 15px;
     }
     &::after {
-        width: 130%;
-        height: 130%;
+        width: 150%;
+        height: 150%;
         position: absolute;
         content: '';
         background: repeating-conic-gradient(#FF2770 0%, #FF2770 5%, #FF2770 10%, transparent 5%, transparent 40%, #FF2770 50%);
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
-        z-index: -1;
-        border-radius: 15px;
     }
-    &:hover::before,
-    &:hover::after {
-        background: repeating-conic-gradient(#FFD700 0%, #FFD700 5%, #FFD700 10%, transparent 5%, transparent 40%, #FFD700 50%);
+
+    img {
+        width: 100%;
+        background-color: #282828;
+        border-radius: 5px;
+        z-index: 1;
     }
 `;
 
-const LogoImg = styled.img`
-    width: 100%;
-    background-color: #282828;
-    border-radius: 15px;
-`;
-
-const NavHeader = styled.nav`
+const DivTextAbout = styled.div`
+    max-width: 60%;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
     @media (max-width: 900px) {
-        display: none;
+        align-items: center;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+        cursor: default;
     }
 `;
 
-const LinkNav = styled.a`
+const DivLinkTextAbout = styled.div`
+    display: flex;
+
+    a {
         display: flex;
         text-align: center;
         text-transform: capitalize;
@@ -145,6 +139,7 @@ const LinkNav = styled.a`
             background-color: #282828;
             transition: .4s ease-in-out;
         }
+    }
 `;
 
-export { Header, LinkLogo, LogoImg, NavHeader, LinkNav };
+export { SectionAbout, DivTextImgAbout, DivDivImgAbout, DivImgAbout, DivTextAbout, DivLinkTextAbout };
