@@ -65,6 +65,9 @@ const Header = styled.header`
     align-items: center;
     padding: 10px 15px;
     animation: ${headerAnim} 2s ease 0s 1 normal forwards;
+    @media (max-width: 900px) {
+        flex-direction: row-reverse;
+    }
 `;
 
 const LinkLogo = styled.a`
@@ -112,6 +115,9 @@ const LogoImg = styled.img`
 const NavHeader = styled.nav`
     display: flex;
     gap: 10px;
+    @media (max-width: 900px) {
+        display: none;
+    }
 `;
 
 const LinkNav = styled.a`
