@@ -32,6 +32,12 @@ const DivSkills = styled.div`
     padding: 40px 20px;
     cursor: default;
     
+    svg {
+        width: 75px;
+        height: 75px;
+        fill: #FFF;
+    }
+
     span {
         font-family: 'Poppins', sans serif;
         color: #43BD8E;

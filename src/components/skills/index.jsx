@@ -1,4 +1,3 @@
-import { Html5PlainWordmark, Css3PlainWordmark, JavascriptPlain, GithubOriginal, GitOriginal, ReactOriginal, PostgresqlOriginal, ExpressOriginal, PrismaOriginal } from 'devicons-react';
 import { DivSectionSkills, DivSkills, SectionSkills } from '../style/skillsstyle';
 
 export const SkillsComponents = () => {
@@ -7,7 +6,6 @@ export const SkillsComponents = () => {
             <h4>Habilidades</h4>
             <DivSectionSkills>
                 <DivSkills>
-                    <Html5PlainWordmark />
                     <span>HTML5</span>
                     <p>HTML é a base fundamental para a criação de páginas web. Ele fornece a estrutura, a semântica e os
                         elementos necessários para apresentar informações de forma organizada e acessível na web, além de
@@ -17,7 +15,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <Css3PlainWordmark />
                     <span>CSS3</span>
                     <p>CSS é essencial para controlar o estilo e o design de páginas web, tornando possível criar layouts
                         atraentes, responsivos e consistentes. Ele desempenha um papel fundamental na apresentação visual de
@@ -26,7 +23,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <JavascriptPlain />
                     <span>JavaScript</span>
                     <p>JavaScript é uma linguagem versátil que desempenha um papel fundamental no desenvolvimento web,
                         aplicativos móveis e em uma variedade de outras aplicações. É uma das linguagens mais amplamente
@@ -36,7 +32,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <GithubOriginal />
                     <span>GitHub</span>
                     <p>GitHub é uma plataforma essencial para desenvolvedores de software e equipes de desenvolvimento,
                         pois facilita o controle de versão, a colaboração, o compartilhamento de código e a gestão de projetos,
@@ -45,7 +40,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <GitOriginal />
                     <span>Git</span>
                     <p>Git é uma ferramenta fundamental no desenvolvimento de software, fornecendo controle de versão,
                         colaboração em equipe, rastreamento de alterações e muitos outros recursos que tornam o desenvolvimento
@@ -55,7 +49,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <ReactOriginal />
                     <span>React</span>
                     <p>React é uma biblioteca JavaScript desenvolvida pelo Facebook. É usada para construir interfaces de
                         usuário (UI) interativas e reativas para aplicações web. O principal objetivo do React é facilitar a
@@ -65,7 +58,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <PostgresqlOriginal />
                     <span>PostgreSql</span>
                     <p>PostgreSQL é um sistema de gerenciamento de banco de dados relacional de código aberto e altamente avançado.
                         Ele é conhecido por sua robustez, escalabilidade e suporte a recursos avançados.
@@ -78,7 +70,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <ExpressOriginal />
                     <span>Express</span>
                     <p>Express é um framework web para Node.js que facilita a criação de servidores e aplicações web.
                         Ele é conhecido por sua simplicidade, flexibilidade e performance. Aqui estão alguns dos principais aspectos do Express:
@@ -90,7 +81,6 @@ export const SkillsComponents = () => {
                 </DivSkills>
 
                 <DivSkills>
-                    <PrismaOriginal />
                     <span>Prisma</span>
                     <p>Prisma é uma ferramenta de ORM (Object-Relational Mapping) moderna e poderosa para Node.js e TypeScript,
                         que facilita a interação com bancos de dados relacionais. Ele ajuda a mapear dados entre o banco de dados e a aplicação de forma mais intuitiva e segura.
