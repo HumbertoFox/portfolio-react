@@ -5,6 +5,7 @@ const SectionSkills = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 20px;
     padding: 0 15px;
 
     h4 {
@@ -19,32 +20,38 @@ const SectionSkills = styled.section`
 
 const DivSectionSkills = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
+    row-gap: 20px;
 `;
 
 const DivSkills = styled.div`
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
-    padding: 40px 20px;
+    row-gap: 20px;
     cursor: default;
-    
-    svg {
-        width: 75px;
-        height: 75px;
-        fill: #FFF;
+    &:hover span {
+        color: #FFF;
+        transform: scale(1.1);
+    }
+    &:hover p {
+        color: #43BD8E;
     }
 
     span {
+        font-size: 1.8rem;
         font-family: 'Poppins', sans serif;
         color: #43BD8E;
+        transition: all .4s ease-in-out;
     }
     p {
+        font-size: 1.1rem;
         font-family: 'Raleway', sans serif;
         color: #FFF;
+        transition: all .4s ease-in-out;
     }
 `;
 
