@@ -41,9 +41,6 @@ const Footer = styled.footer`
     a {
         background-color: #353535;
     }
-    a:hover svg {
-        color: #FFF;
-    }
 `;
 
 export { Footer };

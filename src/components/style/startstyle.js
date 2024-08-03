@@ -114,6 +114,9 @@ const DivStartSocial = styled.div`
         color: #00F;
         transition: all .4s ease-in-out;
     }
+    a:hover svg {
+        color: #FFF;
+    }
 `;
 
 const SectionDivStartImg = styled.div`
