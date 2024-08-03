@@ -7,6 +7,7 @@ const SectionProjects = styled.section`
     align-items: center;
     row-gap: 20px;
     padding: 0 15px;
+    margin-top: 50px;
 
     h5 {
         font-family: 'Poppins', sans serif;
