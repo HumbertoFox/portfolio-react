@@ -26,6 +26,7 @@ const Footer = styled.footer`
 
     span {
         max-width: 0;
+        color: #FFF;
         font-family: monospace, sans serif;
         font-size: 1rem;
         font-weight: 700;
@@ -39,6 +40,9 @@ const Footer = styled.footer`
     }
     a {
         background-color: #353535;
+    }
+    a:hover svg {
+        color: #FFF;
     }
 `;
 

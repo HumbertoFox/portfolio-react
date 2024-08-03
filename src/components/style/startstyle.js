@@ -97,7 +97,7 @@ const DivStartSocial = styled.div`
                      0px 0px 75px #0072FF,
                      0px 0px 100px #0072FF;
         animation: ${animateIcons} 3s linear infinite;
-        transition: 0.3s ease-in-out;
+        transition: all .4s ease-in-out;
     }
     a:nth-child(2) {
         animation-delay: .2s;
@@ -112,6 +112,7 @@ const DivStartSocial = styled.div`
     }
     a svg {
         color: #00F;
+        transition: all .4s ease-in-out;
     }
 `;
 
