@@ -77,7 +77,7 @@ const LinkLogo = styled.a`
     justify-content: center;
     align-items: center;
     background-color: #000;
-    padding: 2px;
+    padding: 1px;
     border-radius: 15px;
     overflow: hidden;
     &::before {
