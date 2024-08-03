@@ -4,7 +4,7 @@ import { Header, LinkLogo, LinkNav, LogoImg, NavHeader } from '../style/headerst
 export const HeaderComponents = () => {
     return (
         <Header>
-            <LinkLogo title='Logo' href='#' aria-label='Icon Logo'>
+            <LinkLogo title='Link Page Html, Css, Js' href='https://humbertofox.github.io/portfolio/' aria-label='Icon Logo'>
                 <LogoImg src={LogoBtn} alt='Logo BetoFoxNet_Info' />
             </LinkLogo>
             <NavHeader>

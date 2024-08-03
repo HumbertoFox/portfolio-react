@@ -80,6 +80,11 @@ const LinkLogo = styled.a`
     padding: 1px;
     border-radius: 15px;
     overflow: hidden;
+    transition: all .4s ease-in-out;
+    &:hover {
+        box-shadow: 0 0 20px #FFD700;
+    }
+    
     &::before {
         width: 130%;
         height: 130%;
