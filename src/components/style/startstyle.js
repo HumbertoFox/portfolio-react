@@ -90,8 +90,6 @@ const DivStartSocial = styled.div`
         align-items: center;
         justify-content: center;
         font-size: 2.5rem;
-        background: #282828;
-        border-radius: 10px;
         text-shadow: 0px 0px 25px #0072FF,
                      0px 0px 50px #0072FF,
                      0px 0px 75px #0072FF,

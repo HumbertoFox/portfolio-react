@@ -38,9 +38,6 @@ const Footer = styled.footer`
         animation: ${blink} .8s normal infinite, ${write} 5s normal infinite;
         cursor: default;
     }
-    a {
-        background-color: #353535;
-    }
 `;
 
 export { Footer };
