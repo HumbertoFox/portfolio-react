@@ -1,5 +1,6 @@
 import ImgPerfil from '../../assets/foto-perfilCF.png';
 import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
+import { LinkNav } from '../style/headerstyle';
 
 export const AboutComponents = () => {
     return (
@@ -21,9 +22,9 @@ export const AboutComponents = () => {
                         Ah, gosto de jogos, filmes, séries, animes e outras nerdices. 💜
                     </p>
                     <DivLinkTextAbout>
-                        <a href='./src/assets/file/cv.pdf' aria-label='Botão para curriculum' target='_blank' rel='noopener'>
+                        <LinkNav href='./src/assets/file/cv.pdf' aria-label='Botão para curriculum' target='_blank' rel='noopener'>
                             <span>Veja meu CV</span>
-                        </a>
+                        </LinkNav>
                     </DivLinkTextAbout>
                 </DivTextAbout>
             </DivTextImgAbout>

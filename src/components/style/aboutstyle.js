@@ -9,18 +9,6 @@ const anime = keyframes`
     }
 `;
 
-const gradient = keyframes`
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-`;
-
 const SectionAbout = styled.section`
     width: 100%;
     min-height: 100vh;
@@ -105,33 +93,6 @@ const DivTextAbout = styled.div`
 
 const DivLinkTextAbout = styled.div`
     display: flex;
-
-    a {
-        display: flex;
-        text-align: center;
-        text-transform: capitalize;
-        font-family: 'Poppins', sans serif;
-        color: #FFF;
-        font-size: 1.2rem;
-        font-weight: 500;
-        border-radius: 10px;
-        letter-spacing: 1px;
-        padding: 1px;
-        background: linear-gradient(45deg, #FFF, #00F, #0F0, #F00, #FFF);
-        background-size: 400% 400%;
-        animation: ${gradient} 4s linear infinite;
-        :hover {
-            color: #43BD8E;
-            text-shadow: 0 0 20px #00F;
-        }
-
-        span {
-            border-radius: 10px 0;
-            padding: 5px 20px;
-            background-color: #282828;
-            transition: .4s ease-in-out;
-        }
-    }
 `;
 
 export { SectionAbout, DivTextImgAbout, DivImgAbout, DivTextAbout, DivLinkTextAbout };
