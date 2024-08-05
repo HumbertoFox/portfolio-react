@@ -26,19 +26,19 @@ export const SkillsComponents = () => {
                 y: 0
             }).fromTo('.divskills1', {
                 opacity: 0,
-                y: 150
+                y: 50
             }, {
                 opacity: 1,
                 y: 0
             }).fromTo('.divskills0', {
                 opacity: 0,
-                x: 150
+                x: 50
             }, {
                 opacity: 1,
                 x: 0
             }).fromTo('.divskills2', {
                 opacity: 0,
-                x: -150
+                x: -50
             }, {
                 opacity: 1,
                 x: 0

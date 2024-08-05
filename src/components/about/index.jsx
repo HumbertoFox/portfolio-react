@@ -27,13 +27,13 @@ export const AboutComponents = () => {
                 y: 0
             }).fromTo('#img', {
                 opacity: 0,
-                x: 150
+                x: 50
             }, {
                 opacity: 1,
                 x: 0
             }).fromTo('#text', {
                 opacity: 0,
-                x: -150
+                x: -50
             }, {
                 opacity: 1,
                 x: 0
