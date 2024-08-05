@@ -1,16 +1,57 @@
+import { useLayoutEffect, useRef } from 'react';
 import ImgPerfil from '../../assets/foto-perfilCF.png';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
 import { LinkNav } from '../style/headerstyle';
 
 export const AboutComponents = () => {
+    const element = useRef();
+    const elementtimeline = useRef();
+
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.context(() => {
+            elementtimeline.current = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#textimg',
+                    scrub: true,
+                    start: 'top 620px',
+                    end: 'bottom 560px'
+                }
+            }).fromTo('#title', {
+                opacity: 0,
+                y: 250
+            }, {
+                opacity: 1,
+                y: 0
+            }).fromTo('#img', {
+                opacity: 0,
+                x: 150
+            }, {
+                opacity: 1,
+                x: 0
+            }).fromTo('#text', {
+                opacity: 0,
+                x: -150
+            }, {
+                opacity: 1,
+                x: 0
+            })
+        }, element);
+
+        return () => {
+            gsap.killTweensOf('#textimg');
+        };
+    }, []);
     return (
-        <SectionAbout id='about_me'>
-            <h3>Sobre mim</h3>
-            <DivTextImgAbout>
-                <DivImgAbout>
+        <SectionAbout id='about_me' ref={element}>
+            <h3 id='title'>Sobre mim</h3>
+            <DivTextImgAbout id='textimg'>
+                <DivImgAbout id='img'>
                     <img src={ImgPerfil} alt='foto sobre mim' />
                 </DivImgAbout>
-                <DivTextAbout>
+                <DivTextAbout id='text'>
                     <p>
                         <strong>Olá! Me chamo Humberto Ribeiro e sou um desenvolvedor Full-Stack em formação! 📚</strong>
                         Gosto MUITO da área de tecnologia, e tenho certeza que posso contribuir em qualquer time com as minhas habilidades.
