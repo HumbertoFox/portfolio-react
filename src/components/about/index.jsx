@@ -10,7 +10,7 @@ export const AboutComponents = () => {
     const elementtimeline = useRef();
 
     useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger);
         gsap.context(() => {
             elementtimeline.current = gsap.timeline({
                 scrollTrigger: {
