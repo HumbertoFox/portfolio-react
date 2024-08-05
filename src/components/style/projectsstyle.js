@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
-import BackGroundFront from '../../assets/backgroundfront.png';
-import BackGround0 from '../../assets/background0.png';
-import BackGround1 from '../../assets/background1.jpg';
-import BackGround2 from '../../assets/background2.jpg';
-import BackGround3 from '../../assets/background3.jpg';
-import BackGround4 from '../../assets/background4.png';
-import BackGround5 from '../../assets/background5.png';
-import BackGround6 from '../../assets/background6.jpg';
-import BackGround7 from '../../assets/background7.jpg';
+import BackGroundFront from '/src/assets/backgroundfront.png';
+import BackGround0 from '/src/assets/background0.png';
+import BackGround1 from '/src/assets/background1.jpg';
+import BackGround2 from '/src/assets/background2.jpg';
+import BackGround3 from '/src/assets/background3.jpg';
+import BackGround4 from '/src/assets/background4.png';
+import BackGround5 from '/src/assets/background5.png';
+import BackGround6 from '/src/assets/background6.jpg';
+import BackGround7 from '/src/assets/background7.jpg';
 
 const SectionProjects = styled.section`
     min-height: 100vh;
