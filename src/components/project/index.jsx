@@ -50,184 +50,184 @@ export const ProjectsComponents = () => {
             <h5 id='title'>Meus projetos</h5>
             <DivSectionProjects>
                 <DivDivProjects className='divproject1' id='divproject0'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front0'>
                         <LinkProjects href='https://github.com/HumbertoFox/projeto-1-react' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back0'>
                         <LinkProjects href='https://projeto-1-react.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto App Consultório</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com React+Vite HTML, CSS e JavaScript</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 Vercel Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject0'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front1'>
                         <LinkProjects href='https://github.com/HumbertoFox/interactive-card-details-form' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back1'>
                         <LinkProjects href='https://humbertofox.github.io/interactive-card-details-form/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto Interative Card FrontEnd</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com HTML, CSS e JavaScript.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject1'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front2'>
                         <LinkProjects href='https://github.com/HumbertoFox/Interactive-rating-component' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back2'>
                         <LinkProjects href='https://humbertofox.github.io/Interactive-rating-component/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com HTML, CSS e JavaScript.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject0'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front3'>
                         <LinkProjects href='https://github.com/HumbertoFox/advice-generator-app-solution' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back3'>
                         <LinkProjects href='https://humbertofox.github.io/advice-generator-app-solution/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com HTML, CSS, JavaScript e API gerador de conselhos.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject1'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front4'>
                         <LinkProjects href='https://github.com/HumbertoFox/exercicio-quest05' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages Versel</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back4'>
                         <LinkProjects href='https://exercicio-quest05.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste Dev Em Dobro PokéDex</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com HTML, CSS, JavaScript, API, React+Vite.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages Versel</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 Versel page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject0'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front5'>
                         <LinkProjects href='https://github.com/HumbertoFox/projeto-0-react' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back5'>
                         <LinkProjects href='https://projeto-0-react.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto App Cadastro de Doadores</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com React+Vite HTML, CSS, JavaScript.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 Vercel Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject1'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front6'>
                         <LinkProjects href='https://github.com/HumbertoFox/FAQ-accordion-card' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back6'>
                         <LinkProjects href='https://humbertofox.github.io/FAQ-accordion-card/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com HTML, CSS, JavaScript.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>
                 </DivDivProjects>
 
                 <DivDivProjects className='divproject0'>
-                    <DivProjectsFront>
+                    <DivProjectsFront className='front7'>
                         <LinkProjects href='https://github.com/HumbertoFox/intro-component-with-sign-up-form' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsFront>
-                    <DivProjectsBack>
+                    <DivProjectsBack className='back7'>
                         <LinkProjects href='https://humbertofox.github.io/intro-component-with-sign-up-form/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
                                 <ParagraphPrimary>Projeto desenvolvido com HTML, CSS, JavaScript.</ParagraphPrimary>
-                                <ParagraphSecondary>🔗 Ver no GitHub Pages</ParagraphSecondary>
+                                <ParagraphSecondary>🔗 GitHub Page</ParagraphSecondary>
                             </div>
                         </LinkProjects>
                     </DivProjectsBack>

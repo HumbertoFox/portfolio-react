@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import BackGroundFront from '../../assets/backgroundfront.png';
+import BackGround0 from '../../assets/background0.png';
+import BackGround1 from '../../assets/background1.jpg';
+import BackGround2 from '../../assets/background2.jpg';
+import BackGround3 from '../../assets/background3.jpg';
+import BackGround4 from '../../assets/background4.png';
+import BackGround5 from '../../assets/background5.png';
+import BackGround6 from '../../assets/background6.jpg';
+import BackGround7 from '../../assets/background7.jpg';
 
 const SectionProjects = styled.section`
     min-height: 100vh;
@@ -56,6 +65,7 @@ const DivProjectsFront = styled.div`
     transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) .3s;
     border-radius: 10px;
     transform: rotateY(0deg);
+    background-image: url(${BackGroundFront});
     &::after {
         width: 100%;
         height: 100%;
@@ -84,6 +94,41 @@ const DivProjectsBack = styled.div`
     top: 0;
     left: 0;
     transform: rotateY(180deg);
+    ${({ className }) => {
+        if (className === 'back0') {
+            return css`
+                background-image: url(${BackGround0});
+            `;
+        } else if (className === 'back1') {
+            return css`
+                background-image: url(${BackGround1});
+            `;
+        } else if (className === 'back2') {
+            return css`
+                background-image: url(${BackGround2});
+            `;
+        } else if (className === 'back3') {
+            return css`
+                background-image: url(${BackGround3});
+            `;
+        } else if (className === 'back4') {
+            return css`
+                background-image: url(${BackGround4});
+            `;
+        } else if (className === 'back5') {
+            return css`
+                background-image: url(${BackGround5});
+            `;
+        } else if (className === 'back6') {
+            return css`
+                background-image: url(${BackGround6});
+            `;
+        } else if (className === 'back7') {
+            return css`
+                background-image: url(${BackGround7});
+            `;
+        }
+    }}
     &::after {
         width: 100%;
         height: 100%;
