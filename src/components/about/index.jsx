@@ -15,7 +15,7 @@ export const AboutComponents = () => {
             elementtimeline.current = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#textimg',
-                    scrub: true,
+                    scrub: .5,
                     start: 'top 620px',
                     end: 'bottom 560px'
                 }

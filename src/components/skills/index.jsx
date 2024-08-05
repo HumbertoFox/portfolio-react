@@ -1,12 +1,59 @@
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DivSectionSkills, DivSkills, SectionSkills } from '../style/skillsstyle';
 import { Html5Original, Css3Original, JavascriptOriginal, GithubOriginal, GitOriginal, ReactOriginal, VitejsOriginal, NextjsOriginal, PostgresqlOriginal, MariadbOriginal, PhpOriginal, ExpressOriginal, PrismaOriginal } from 'devicons-react';
 
 export const SkillsComponents = () => {
+    const element = useRef();
+    const elementtimeline = useRef();
+
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.context(() => {
+            elementtimeline.current = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#divskills0',
+                    scrub: .5,
+                    start: 'top 650px',
+                    end: 'bottom 450px'
+                }
+            }).fromTo('#title', {
+                opacity: 0,
+                y: 250
+            }, {
+                opacity: 1,
+                y: 0
+            }).fromTo('.divskills1', {
+                opacity: 0,
+                y: 150
+            }, {
+                opacity: 1,
+                y: 0
+            }).fromTo('.divskills0', {
+                opacity: 0,
+                x: 150
+            }, {
+                opacity: 1,
+                x: 0
+            }).fromTo('.divskills2', {
+                opacity: 0,
+                x: -150
+            }, {
+                opacity: 1,
+                x: 0
+            })
+        }, element);
+
+        return () => {
+            gsap.killTweensOf('#divskills0');
+        };
+    }, []);
     return (
-        <SectionSkills id='skills'>
-            <h4>Habilidades</h4>
+        <SectionSkills id='skills' ref={element}>
+            <h4 id='title'>Habilidades</h4>
             <DivSectionSkills>
-                <DivSkills>
+                <DivSkills className='divskills0' id='divskills0'>
                     <Html5Original size='100' />
                     <span>HTML5</span>
                     <p>HTML é a base fundamental para a criação de páginas web. Ele fornece a estrutura, a semântica e os
@@ -16,7 +63,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills1'>
                     <Css3Original size='100' />
                     <span>CSS3</span>
                     <p>CSS é essencial para controlar o estilo e o design de páginas web, tornando possível criar layouts
@@ -25,7 +72,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills2'>
                     <JavascriptOriginal size='100' />
                     <span>JavaScript</span>
                     <p>JavaScript é uma linguagem versátil que desempenha um papel fundamental no desenvolvimento web,
@@ -35,7 +82,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills0'>
                     <GithubOriginal size='100' />
                     <span>GitHub</span>
                     <p>GitHub é uma plataforma essencial para desenvolvedores de software e equipes de desenvolvimento,
@@ -44,7 +91,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills1'>
                     <GitOriginal size='100' />
                     <span>Git</span>
                     <p>Git é uma ferramenta fundamental no desenvolvimento de software, fornecendo controle de versão,
@@ -54,7 +101,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills2'> 
                     <ReactOriginal size='100' />
                     <span>React</span>
                     <p>React é uma biblioteca JavaScript desenvolvida pelo Facebook. É usada para construir interfaces de
@@ -64,7 +111,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills0'>
                     <VitejsOriginal size='100' />
                     <span>Vite.Js</span>
                     <p>Vite é uma ferramenta de construção e desenvolvimento para aplicações web, criada por Evan You, o criador do Vue.js.
@@ -76,7 +123,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills1'>
                     <NextjsOriginal size='100' />
                     <span>Next.Js</span>
                     <p>Next.js é um framework React desenvolvido pela Vercel que facilita a criação de aplicações web.
@@ -89,7 +136,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills2'>
                     <PostgresqlOriginal size='100' />
                     <span>PostgreSql</span>
                     <p>PostgreSQL é um sistema de gerenciamento de banco de dados relacional de código aberto e altamente avançado.
@@ -102,20 +149,20 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills0'>
                     <MariadbOriginal size='100' />
                     <span>MariaDB</span>
-                    <p>MariaDB é um sistema de gerenciamento de banco de dados relacional (RDBMS) que é um fork do MySQL, 
-                        criado por alguns dos desenvolvedores originais do MySQL após a aquisição deste último pela Oracle. 
-                        MariaDB é popular por ser uma alternativa de código aberto ao MySQL e oferece uma série de recursos e melhorias. 
+                    <p>MariaDB é um sistema de gerenciamento de banco de dados relacional (RDBMS) que é um fork do MySQL,
+                        criado por alguns dos desenvolvedores originais do MySQL após a aquisição deste último pela Oracle.
+                        MariaDB é popular por ser uma alternativa de código aberto ao MySQL e oferece uma série de recursos e melhorias.
                         Aqui estão algumas das características principais do MariaDB:
-                        1. **Código Aberto**, 2. **Compatibilidade com MySQL**, 3. **Desempenho Aprimorado**, 4. **Recursos Avançados**, 
-                        5. **Segurança**, 6. **Replicação e Escalabilidade**, 7. **Comunidade Ativa**, 8. **Interface de Linha de Comando**, 
+                        1. **Código Aberto**, 2. **Compatibilidade com MySQL**, 3. **Desempenho Aprimorado**, 4. **Recursos Avançados**,
+                        5. **Segurança**, 6. **Replicação e Escalabilidade**, 7. **Comunidade Ativa**, 8. **Interface de Linha de Comando**,
                         9. **Interface Gráfica**.
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills1'>
                     <PhpOriginal size='100' />
                     <span>PHP</span>
                     <p>PHP (Hypertext Preprocessor) é uma linguagem de programação amplamente utilizada para desenvolvimento web,
@@ -127,7 +174,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills2'>
                     <ExpressOriginal size='100' />
                     <span>Express</span>
                     <p>Express é um framework web para Node.js que facilita a criação de servidores e aplicações web.
@@ -139,7 +186,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills>
+                <DivSkills className='divskills0'>
                     <PrismaOriginal size='100' />
                     <span>Prisma</span>
                     <p>Prisma é uma ferramenta de ORM (Object-Relational Mapping) moderna e poderosa para Node.js e TypeScript,
