@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react';
-import ImgPerfil from '../../assets/foto-perfilCF.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ImgPerfil from '../../assets/foto-perfilCF.png';
 import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
 import { LinkNav } from '../style/headerstyle';
 
