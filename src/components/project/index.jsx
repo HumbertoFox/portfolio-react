@@ -18,7 +18,7 @@ export const ProjectsComponents = () => {
                     trigger: '#divproject0',
                     scrub: .5,
                     start: 'top 620px',
-                    end: 'bottom 600'
+                    end: 'bottom 720px'
                 }
             }).fromTo('#title', {
                 opacity: 0,

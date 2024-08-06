@@ -16,7 +16,7 @@ export const SkillsComponents = () => {
                     trigger: '#divskills0',
                     scrub: .5,
                     start: 'top 650px',
-                    end: 'bottom 450px'
+                    end: 'bottom 500px'
                 }
             }).fromTo('#title', {
                 opacity: 0,

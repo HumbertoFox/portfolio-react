@@ -17,7 +17,7 @@ export const AboutComponents = () => {
                     trigger: '#textimg',
                     scrub: .5,
                     start: 'top 620px',
-                    end: 'bottom 560px'
+                    end: 'bottom 680px'
                 }
             }).fromTo('#title', {
                 opacity: 0,

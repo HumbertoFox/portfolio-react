@@ -48,8 +48,10 @@ const SectionStart = styled.section`
     padding: 0 15px;
     transition: .4s linear;
     @media (max-width: 900px) {
-        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 30px;
+        padding-bottom: 50px;
     }
 `;
 
@@ -62,7 +64,6 @@ const SectionDivStartText = styled.div`
     animation: ${rightAnime} .8s ease-in-out both;
     @media (max-width: 900px) {
         align-items: center;
-        text-align: center;
     }
 
     h2,

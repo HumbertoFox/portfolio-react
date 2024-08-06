@@ -24,6 +24,9 @@ const SectionAbout = styled.section`
         text-transform: uppercase;
         cursor: default;
     }
+    @media (max-width: 900px) {
+        padding-bottom: 50px;
+    }
 `;
 
 const DivTextImgAbout = styled.div`
