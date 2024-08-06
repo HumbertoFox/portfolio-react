@@ -14,6 +14,7 @@ const SectionAbout = styled.section`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-family: 'Poppins', sans serif;
     color: #FFF;
 

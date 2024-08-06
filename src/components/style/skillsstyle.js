@@ -32,6 +32,7 @@ const DivSkills = styled.div`
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+    padding: 40px 20px;
     cursor: default;
     &:hover span {
         color: #FFF;
