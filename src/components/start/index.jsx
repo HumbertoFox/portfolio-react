@@ -1,11 +1,31 @@
+import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faWhatsapp, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import ImgPrefil from '../../assets/foto-perfil.png';
 import { DivStartImg, DivStartSocial, PerfilImg, SectionDivStartImg, SectionDivStartText, SectionStart } from '../style/startstyle';
+import ImgPrefil from '../../assets/foto-perfil.png';
 
 export const StartComponents = () => {
+
+    const selectAnimations = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const windowTop = window.pageYOffset + window.innerHeight * -.5;
+            if (selectAnimations.current) {
+                const animation = selectAnimations.current;
+                if (windowTop > animation.offsetTop) {
+                    animation.classList.remove('animation');
+                } else {
+                    animation.classList.add('animation');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <SectionStart>
+        <SectionStart ref={selectAnimations} className='animation' data-animation='up'>
             <SectionDivStartText>
                 <p>Olá 🖖,</p>
                 <h1>Sou o Humberto Ribeiro</h1>
