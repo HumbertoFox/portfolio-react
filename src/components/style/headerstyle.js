@@ -58,6 +58,17 @@ const headerAnim = keyframes`
 	}
 `;
 
+const hamburgerInAnime = keyframes`
+	0% {
+		transform: translateY(-250px);
+		opacity: 0;
+	  }
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+`;
+
 const Header = styled.header`
     width: 100%;
     display: flex;
@@ -117,12 +128,84 @@ const LogoImg = styled.img`
     z-index: 1;
 `;
 
+const DivHeader = styled.div`
+    label {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    label div {
+        width: 60px;
+        height: 60px;
+        display: none;
+        align-self: flex-start;
+    }
+    label span {
+        width: 30px;
+        height: 2px;
+        position: relative;
+        display: block;
+        top: 29px;
+        left: 15px;
+        background-color: #FFF;
+        transition: all .5s ease-in-out;
+    }
+    label span::before,
+    label span::after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        content: '';
+        background-color: #FFF;
+        transition: all .2s ease-in-out;
+    }
+    label span::before {
+        top: -10px;
+    }
+    label span::after {
+        bottom: -10px;
+    }
+    input {
+        display: none;
+    }
+    input:checked~label span {
+        transform: rotate(45deg);
+    }
+    input:checked~label span::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+    input:checked~label span::after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+    @media (max-width: 900px) {
+        position: absolute;
+        top: 35px;
+        left: 20px;
+
+        label div {
+            display: flex;
+        }
+        input:checked~nav {
+            display: flex;
+            flex-direction: column;
+            //background-color: var(--cor-fundo-escuro);
+            opacity: .8;
+            padding: 20px;
+            border-radius: 10px;
+            animation: ${hamburgerInAnime} .6s linear forwards;
+        }
+        nav {
+            display: none;
+        }
+    }
+`;
+
 const NavHeader = styled.nav`
     display: flex;
     gap: 10px;
-    @media (max-width: 900px) {
-        display: none;
-    }
 `;
 
 const LinkNav = styled.a`
@@ -145,6 +228,7 @@ const LinkNav = styled.a`
         }
 
         span {
+            width: 100%;
             border-radius: 10px 0;
             padding: 5px 20px;
             background-color: #282828;
@@ -152,4 +236,4 @@ const LinkNav = styled.a`
         }
 `;
 
-export { Header, LinkLogo, LogoImg, NavHeader, LinkNav };
+export { Header, LinkLogo, LogoImg, DivHeader, NavHeader, LinkNav };
