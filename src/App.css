@@ -8,11 +8,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   min-width: 375px;
   min-height: 100vh;
-  scroll-behavior: smooth;
   background-color: #282828;
 }
 
