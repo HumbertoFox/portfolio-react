@@ -1,54 +1,10 @@
-import { useLayoutEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
 import { DivSectionSkills, DivSkills, SectionSkills } from '../style/skillsstyle';
 import { Html5Original, Css3Original, JavascriptOriginal, GithubOriginal, GitOriginal, ReactOriginal, VitejsOriginal, NextjsOriginal, PostgresqlOriginal, MariadbOriginal, PhpOriginal, ExpressOriginal, PrismaOriginal } from 'devicons-react';
 
 export const SkillsComponents = () => {
     const element = useRef();
-    const elementtimeline = useRef();
-
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.context(() => {
-            elementtimeline.current = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '#divskills0',
-                    scrub: .5,
-                    start: 'top 650px',
-                    end: 'bottom 500px'
-                }
-            }).fromTo('#title', {
-                opacity: 0,
-                y: 250
-            }, {
-                opacity: 1,
-                y: 0
-            }).fromTo('.divskills1', {
-                opacity: 0,
-                y: 50
-            }, {
-                opacity: 1,
-                y: 0
-            }).fromTo('.divskills0', {
-                opacity: 0,
-                x: 50
-            }, {
-                opacity: 1,
-                x: 0
-            }).fromTo('.divskills2', {
-                opacity: 0,
-                x: -50
-            }, {
-                opacity: 1,
-                x: 0
-            })
-        }, element);
-
-        return () => {
-            gsap.killTweensOf('#divskills0');
-        };
-    }, []);
+    
     return (
         <SectionSkills id='skills' ref={element}>
             <h4 id='title'>Habilidades</h4>

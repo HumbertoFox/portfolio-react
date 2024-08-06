@@ -1,49 +1,11 @@
-import { useLayoutEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
 import ImgPerfil from '../../assets/foto-perfilCF.png';
 import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
 import { LinkNav } from '../style/headerstyle';
 
 export const AboutComponents = () => {
     const element = useRef();
-    const elementtimeline = useRef();
 
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.context(() => {
-            elementtimeline.current = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '#textimg',
-                    scrub: .5,
-                    start: 'top 620px',
-                    end: 'bottom 680px'
-                }
-            }).fromTo('#title', {
-                opacity: 0,
-                y: 250
-            }, {
-                opacity: 1,
-                y: 0
-            }).fromTo('#img', {
-                opacity: 0,
-                x: 50
-            }, {
-                opacity: 1,
-                x: 0
-            }).fromTo('#text', {
-                opacity: 0,
-                x: -50
-            }, {
-                opacity: 1,
-                x: 0
-            })
-        }, element);
-
-        return () => {
-            gsap.killTweensOf('#textimg');
-        };
-    }, []);
     return (
         <SectionAbout id='about_me' ref={element}>
             <h3 id='title'>Sobre mim</h3>

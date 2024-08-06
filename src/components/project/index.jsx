@@ -1,6 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import LogoBfn from '../../assets/LOGOBFN.png';
@@ -8,43 +6,7 @@ import { DivDivProjects, DivProjectsBack, DivProjectsFront, DivSectionProjects, 
 
 export const ProjectsComponents = () => {
     const element = useRef();
-    const elementtimeline = useRef();
-
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.context(() => {
-            elementtimeline.current = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '#divproject0',
-                    scrub: .5,
-                    start: 'top 620px',
-                    end: 'bottom 720px'
-                }
-            }).fromTo('#title', {
-                opacity: 0,
-                y: 250
-            }, {
-                opacity: 1,
-                y: 0
-            }).fromTo('.divproject1', {
-                opacity: 0,
-                x: 50
-            }, {
-                opacity: 1,
-                x: 0
-            }).fromTo('.divproject0', {
-                opacity: 0,
-                x: -50
-            }, {
-                opacity: 1,
-                x: 0
-            })
-        }, element);
-
-        return () => {
-            gsap.killTweensOf('#divproject0');
-        };
-    }, []);
+    
     return (
         <SectionProjects id='projects' ref={element}>
             <h5 id='title'>Meus projetos</h5>
