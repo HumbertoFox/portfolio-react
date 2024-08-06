@@ -1,7 +1,8 @@
 import { useRef } from 'react';
-import ImgPerfil from '../../assets/foto-perfilCF.png';
 import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
 import { LinkNav } from '../style/headerstyle';
+import ImgPerfil from '../../assets/foto-perfilCF.png';
+import CurricuLum from '../../assets/file/cv.pdf';
 
 export const AboutComponents = () => {
     const element = useRef();
@@ -25,7 +26,7 @@ export const AboutComponents = () => {
                         Ah, gosto de jogos, filmes, séries, animes e outras nerdices. 💜
                     </p>
                     <DivLinkTextAbout>
-                        <LinkNav href='/src/assets/file/cv.pdf' aria-label='Botão para curriculum' target='_blank' rel='noopener'>
+                        <LinkNav href={CurricuLum} aria-label='Botão para curriculum' target='_blank' rel='noopener'>
                             <span>Veja meu CV</span>
                         </LinkNav>
                     </DivLinkTextAbout>
