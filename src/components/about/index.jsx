@@ -25,7 +25,7 @@ export const AboutComponents = () => {
                         Ah, gosto de jogos, filmes, séries, animes e outras nerdices. 💜
                     </p>
                     <DivLinkTextAbout>
-                        <LinkNav href='./src/assets/file/cv.pdf' aria-label='Botão para curriculum' target='_blank' rel='noopener'>
+                        <LinkNav href='/src/assets/file/cv.pdf' aria-label='Botão para curriculum' target='_blank' rel='noopener'>
                             <span>Veja meu CV</span>
                         </LinkNav>
                     </DivLinkTextAbout>
