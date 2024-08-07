@@ -5,7 +5,6 @@ import { DivStartImg, DivStartSocial, PerfilImg, SectionDivStartImg, SectionDivS
 import ImgPrefil from '../../assets/foto-perfil.png';
 
 export const StartComponents = () => {
-
     const selectAnimations = useRef(null);
 
     useEffect(() => {

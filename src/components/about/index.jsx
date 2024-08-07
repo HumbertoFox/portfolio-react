@@ -1,20 +1,37 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { DivImgAbout, DivLinkTextAbout, DivTextAbout, DivTextImgAbout, SectionAbout } from '../style/aboutstyle';
 import { LinkNav } from '../style/headerstyle';
 import ImgPerfil from '../../assets/foto-perfilCF.png';
 import CurricuLum from '../../assets/file/cv.pdf';
 
 export const AboutComponents = () => {
-    const element = useRef();
+    const selectAnimations = useRef(null);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const windowTop = window.pageYOffset + window.innerHeight * 0.4;
+            const animations = selectAnimations.current.querySelectorAll('[data-animation]');
+
+            animations.forEach(animation => {
+                if (windowTop > animation.offsetTop) {
+                    animation.classList.add('animation');
+                } else {
+                    animation.classList.remove('animation');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <SectionAbout id='about_me' ref={element}>
-            <h3 id='title'>Sobre mim</h3>
-            <DivTextImgAbout id='textimg'>
-                <DivImgAbout id='img'>
+        <SectionAbout id='about_me' ref={selectAnimations}>
+            <h3 className='animation' data-animation="up">Sobre mim</h3>
+            <DivTextImgAbout>
+                <DivImgAbout className='animation' data-animation="right">
                     <img src={ImgPerfil} alt='foto sobre mim' />
                 </DivImgAbout>
-                <DivTextAbout id='text'>
+                <DivTextAbout className='animation' data-animation="left">
                     <p>
                         <strong>Olá! Me chamo Humberto Ribeiro e sou um desenvolvedor Full-Stack em formação! 📚</strong>
                         Gosto MUITO da área de tecnologia, e tenho certeza que posso contribuir em qualquer time com as minhas habilidades.
