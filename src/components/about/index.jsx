@@ -9,7 +9,7 @@ export const AboutComponents = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const windowTop = window.pageYOffset + window.innerHeight * 0.4;
+            const windowTop = window.pageYOffset + window.innerHeight * .5;
             const animations = selectAnimations.current.querySelectorAll('[data-animation]');
 
             animations.forEach(animation => {
@@ -26,12 +26,12 @@ export const AboutComponents = () => {
     }, []);
     return (
         <SectionAbout id='about_me' ref={selectAnimations}>
-            <h3 className='animation' data-animation="up">Sobre mim</h3>
+            <h3 className='animation' data-animation='up'>Sobre mim</h3>
             <DivTextImgAbout>
-                <DivImgAbout className='animation' data-animation="right">
+                <DivImgAbout className='animation' data-animation='right'>
                     <img src={ImgPerfil} alt='foto sobre mim' />
                 </DivImgAbout>
-                <DivTextAbout className='animation' data-animation="left">
+                <DivTextAbout className='animation' data-animation='left'>
                     <p>
                         <strong>Olá! Me chamo Humberto Ribeiro e sou um desenvolvedor Full-Stack em formação! 📚</strong>
                         Gosto MUITO da área de tecnologia, e tenho certeza que posso contribuir em qualquer time com as minhas habilidades.

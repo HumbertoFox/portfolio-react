@@ -1,15 +1,32 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { DivSectionSkills, DivSkills, SectionSkills } from '../style/skillsstyle';
 import { Html5Original, Css3Original, JavascriptOriginal, GithubOriginal, GitOriginal, ReactOriginal, VitejsOriginal, NextjsOriginal, PostgresqlOriginal, MariadbOriginal, PhpOriginal, ExpressOriginal, PrismaOriginal } from 'devicons-react';
 
 export const SkillsComponents = () => {
-    const element = useRef();
-    
+    const selectAnimations = useRef();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const windowTop = window.pageYOffset + window.innerHeight * .5;
+            const animations = selectAnimations.current.querySelectorAll('[data-animation]');
+
+            animations.forEach(animation => {
+                if (windowTop > animation.offsetTop) {
+                    animation.classList.add('animation');
+                } else {
+                    animation.classList.remove('animation');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <SectionSkills id='skills' ref={element}>
-            <h4 id='title'>Habilidades</h4>
-            <DivSectionSkills>
-                <DivSkills className='divskills0' id='divskills0'>
+        <SectionSkills id='skills' ref={selectAnimations}>
+            <h4 className='animation' data-animation='up'>Habilidades</h4>
+            <DivSectionSkills className='animation' data-animation='left'>
+                <DivSkills>
                     <Html5Original size='100' />
                     <span>HTML5</span>
                     <p>HTML é a base fundamental para a criação de páginas web. Ele fornece a estrutura, a semântica e os
@@ -19,7 +36,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills1'>
+                <DivSkills>
                     <Css3Original size='100' />
                     <span>CSS3</span>
                     <p>CSS é essencial para controlar o estilo e o design de páginas web, tornando possível criar layouts
@@ -28,7 +45,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills2'>
+                <DivSkills>
                     <JavascriptOriginal size='100' />
                     <span>JavaScript</span>
                     <p>JavaScript é uma linguagem versátil que desempenha um papel fundamental no desenvolvimento web,
@@ -38,7 +55,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills0'>
+                <DivSkills>
                     <GithubOriginal size='100' />
                     <span>GitHub</span>
                     <p>GitHub é uma plataforma essencial para desenvolvedores de software e equipes de desenvolvimento,
@@ -47,7 +64,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills1'>
+                <DivSkills>
                     <GitOriginal size='100' />
                     <span>Git</span>
                     <p>Git é uma ferramenta fundamental no desenvolvimento de software, fornecendo controle de versão,
@@ -57,7 +74,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills2'> 
+                <DivSkills>
                     <ReactOriginal size='100' />
                     <span>React</span>
                     <p>React é uma biblioteca JavaScript desenvolvida pelo Facebook. É usada para construir interfaces de
@@ -67,7 +84,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills0'>
+                <DivSkills>
                     <VitejsOriginal size='100' />
                     <span>Vite.Js</span>
                     <p>Vite é uma ferramenta de construção e desenvolvimento para aplicações web, criada por Evan You, o criador do Vue.js.
@@ -79,7 +96,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills1'>
+                <DivSkills>
                     <NextjsOriginal size='100' />
                     <span>Next.Js</span>
                     <p>Next.js é um framework React desenvolvido pela Vercel que facilita a criação de aplicações web.
@@ -92,7 +109,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills2'>
+                <DivSkills>
                     <PostgresqlOriginal size='100' />
                     <span>PostgreSql</span>
                     <p>PostgreSQL é um sistema de gerenciamento de banco de dados relacional de código aberto e altamente avançado.
@@ -105,7 +122,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills0'>
+                <DivSkills>
                     <MariadbOriginal size='100' />
                     <span>MariaDB</span>
                     <p>MariaDB é um sistema de gerenciamento de banco de dados relacional (RDBMS) que é um fork do MySQL,
@@ -118,7 +135,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills1'>
+                <DivSkills>
                     <PhpOriginal size='100' />
                     <span>PHP</span>
                     <p>PHP (Hypertext Preprocessor) é uma linguagem de programação amplamente utilizada para desenvolvimento web,
@@ -130,7 +147,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills2'>
+                <DivSkills>
                     <ExpressOriginal size='100' />
                     <span>Express</span>
                     <p>Express é um framework web para Node.js que facilita a criação de servidores e aplicações web.
@@ -142,7 +159,7 @@ export const SkillsComponents = () => {
                     </p>
                 </DivSkills>
 
-                <DivSkills className='divskills0'>
+                <DivSkills>
                     <PrismaOriginal size='100' />
                     <span>Prisma</span>
                     <p>Prisma é uma ferramenta de ORM (Object-Relational Mapping) moderna e poderosa para Node.js e TypeScript,
