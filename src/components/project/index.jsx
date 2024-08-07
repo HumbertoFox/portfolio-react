@@ -1,18 +1,35 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import LogoBfn from '../../assets/LOGOBFN.png';
 import { DivDivProjects, DivProjectsBack, DivProjectsFront, DivSectionProjects, LinkProjects, ParagraphPrimary, ParagraphSecondary, SectionProjects, SpanDivLinks } from '../style/projectsstyle';
 
 export const ProjectsComponents = () => {
-    const element = useRef();
-    
+    const selectAnimations = useRef();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const windowTop = window.pageYOffset + window.innerHeight * .5;
+            const animations = selectAnimations.current.querySelectorAll('[data-animation]');
+
+            animations.forEach(animation => {
+                if (windowTop > animation.offsetTop) {
+                    animation.classList.add('animation');
+                } else {
+                    animation.classList.remove('animation');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
     return (
-        <SectionProjects id='projects' ref={element}>
-            <h5 id='title'>Meus projetos</h5>
-            <DivSectionProjects>
-                <DivDivProjects className='divproject1' id='divproject0'>
-                    <DivProjectsFront className='front0'>
+        <SectionProjects id='projects' ref={selectAnimations}>
+            <h5 className='animation' data-animation="up">Meus projetos</h5>
+            <DivSectionProjects className='animation' data-animation="left">
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/projeto-1-react' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -34,8 +51,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject0'>
-                    <DivProjectsFront className='front1'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/interactive-card-details-form' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -57,8 +74,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject1'>
-                    <DivProjectsFront className='front2'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/Interactive-rating-component' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -80,8 +97,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject0'>
-                    <DivProjectsFront className='front3'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/advice-generator-app-solution' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -103,8 +120,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject1'>
-                    <DivProjectsFront className='front4'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/exercicio-quest05' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -126,8 +143,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject0'>
-                    <DivProjectsFront className='front5'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/projeto-0-react' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -149,8 +166,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject1'>
-                    <DivProjectsFront className='front6'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/FAQ-accordion-card' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
@@ -172,8 +189,8 @@ export const ProjectsComponents = () => {
                     </DivProjectsBack>
                 </DivDivProjects>
 
-                <DivDivProjects className='divproject0'>
-                    <DivProjectsFront className='front7'>
+                <DivDivProjects>
+                    <DivProjectsFront>
                         <LinkProjects href='https://github.com/HumbertoFox/intro-component-with-sign-up-form' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
