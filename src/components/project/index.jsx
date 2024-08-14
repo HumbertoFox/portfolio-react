@@ -30,7 +30,7 @@ export const ProjectsComponents = () => {
             <DivSectionProjects className='animation' data-animation="left">
                 <DivDivProjects>
                     <DivProjectsFront>
-                        <LinkProjects href='https://github.com/HumbertoFox/projeto-1-react' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://github.com/HumbertoFox/consultorio-app' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
@@ -40,7 +40,7 @@ export const ProjectsComponents = () => {
                         </LinkProjects>
                     </DivProjectsFront>
                     <DivProjectsBack className='back0'>
-                        <LinkProjects href='https://projeto-1-react.vercel.app/' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://consultorio-app.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto App Consultório</SpanDivLinks>
                             <div>
