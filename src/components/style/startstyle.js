@@ -41,7 +41,8 @@ const animateIcons = keyframes`
 `;
 
 const SectionStart = styled.section`
-    min-height: 85vh;
+    min-height: calc(100vh - 130px);
+    top: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;

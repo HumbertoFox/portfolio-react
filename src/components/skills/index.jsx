@@ -3,18 +3,18 @@ import { DivSectionSkills, DivSkills, SectionSkills } from '../style/skillsstyle
 import { Html5Original, Css3Original, JavascriptOriginal, GithubOriginal, GitOriginal, ReactOriginal, VitejsOriginal, NextjsOriginal, PostgresqlOriginal, MariadbOriginal, PhpOriginal, ExpressOriginal, PrismaOriginal } from 'devicons-react';
 
 export const SkillsComponents = () => {
-    const selectAnimations = useRef();
+    const selectSkillsAnimations = useRef({});
 
     useEffect(() => {
         const handleScroll = () => {
-            const windowTop = window.pageYOffset + window.innerHeight * .5;
-            const animations = selectAnimations.current.querySelectorAll('[data-animation]');
+            const windowSkillsTop = window.pageYOffset + window.innerHeight * .5;
+            const animationsSkills = selectSkillsAnimations.current.querySelectorAll('[data-animation]');
 
-            animations.forEach(animation => {
-                if (windowTop > animation.offsetTop) {
-                    animation.classList.add('animation');
+            animationsSkills.forEach(animationSkills => {
+                if (windowSkillsTop > animationSkills.offsetTop) {
+                    animationSkills.classList.add('animation');
                 } else {
-                    animation.classList.remove('animation');
+                    animationSkills.classList.remove('animation');
                 }
             });
         };
@@ -23,7 +23,7 @@ export const SkillsComponents = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <SectionSkills id='skills' ref={selectAnimations}>
+        <SectionSkills id='skills' ref={selectSkillsAnimations}>
             <h4 className='animation' data-animation='up'>Habilidades</h4>
             <DivSectionSkills className='animation' data-animation='left'>
                 <DivSkills>

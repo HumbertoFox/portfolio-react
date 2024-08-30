@@ -5,18 +5,18 @@ import LogoBfn from '../../assets/LOGOBFN.png';
 import { DivDivProjects, DivProjectsBack, DivProjectsFront, DivSectionProjects, LinkProjects, ParagraphPrimary, ParagraphSecondary, SectionProjects, SpanDivLinks } from '../style/projectsstyle';
 
 export const ProjectsComponents = () => {
-    const selectAnimations = useRef();
+    const selectProjectsAnimations = useRef({});
 
     useEffect(() => {
         const handleScroll = () => {
-            const windowTop = window.pageYOffset + window.innerHeight * .5;
-            const animations = selectAnimations.current.querySelectorAll('[data-animation]');
+            const windowProjectsTop = window.pageYOffset + window.innerHeight * .5;
+            const animationsProjects = selectProjectsAnimations.current.querySelectorAll('[data-animation]');
 
-            animations.forEach(animation => {
-                if (windowTop > animation.offsetTop) {
-                    animation.classList.add('animation');
+            animationsProjects.forEach(animationProjects => {
+                if (windowProjectsTop > animationProjects.offsetTop) {
+                    animationProjects.classList.add('animation');
                 } else {
-                    animation.classList.remove('animation');
+                    animationProjects.classList.remove('animation');
                 }
             });
         };
@@ -25,7 +25,7 @@ export const ProjectsComponents = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <SectionProjects id='projects' ref={selectAnimations}>
+        <SectionProjects id='projects' ref={selectProjectsAnimations}>
             <h5 className='animation' data-animation="up">Meus projetos</h5>
             <DivSectionProjects className='animation' data-animation="left">
                 <DivDivProjects>

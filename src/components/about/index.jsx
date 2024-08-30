@@ -5,18 +5,18 @@ import ImgPerfil from '../../assets/foto-perfilCF.png';
 import CurricuLum from '../../assets/file/cv.pdf';
 
 export const AboutComponents = () => {
-    const selectAnimations = useRef(null);
+    const selectAboutAnimations = useRef({});
 
     useEffect(() => {
         const handleScroll = () => {
-            const windowTop = window.pageYOffset + window.innerHeight * .5;
-            const animations = selectAnimations.current.querySelectorAll('[data-animation]');
+            const windowAboutTop = window.pageYOffset + window.innerHeight * .5;
+            const animationsAbout = selectAboutAnimations.current.querySelectorAll('[data-animation]');
 
-            animations.forEach(animation => {
-                if (windowTop > animation.offsetTop) {
-                    animation.classList.add('animation');
+            animationsAbout.forEach(animationAbout => {
+                if (windowAboutTop > animationAbout.offsetTop) {
+                    animationAbout.classList.add('animation');
                 } else {
-                    animation.classList.remove('animation');
+                    animationAbout.classList.remove('animation');
                 }
             });
         };
@@ -25,7 +25,7 @@ export const AboutComponents = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <SectionAbout id='about_me' ref={selectAnimations}>
+        <SectionAbout id='about_me' ref={selectAboutAnimations}>
             <h3 className='animation' data-animation='up'>Sobre mim</h3>
             <DivTextImgAbout>
                 <DivImgAbout className='animation' data-animation='right'>
