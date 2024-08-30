@@ -64,6 +64,7 @@ const SectionDivStartText = styled.div`
     animation: ${rightAnime} .8s ease-in-out both;
     @media (max-width: 900px) {
         align-items: center;
+        text-align: center;
     }
 
     h2,
