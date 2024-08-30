@@ -168,7 +168,7 @@ export const ProjectsComponents = () => {
 
                 <DivDivProjects>
                     <DivProjectsFront>
-                        <LinkProjects href='https://github.com/HumbertoFox/FAQ-accordion-card' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://github.com/HumbertoFox/films-app/' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
@@ -178,7 +178,7 @@ export const ProjectsComponents = () => {
                         </LinkProjects>
                     </DivProjectsFront>
                     <DivProjectsBack className='back6'>
-                        <LinkProjects href='https://humbertofox.github.io/FAQ-accordion-card/' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://films-app-betofoxnet-info-projects.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
@@ -191,7 +191,7 @@ export const ProjectsComponents = () => {
 
                 <DivDivProjects>
                     <DivProjectsFront>
-                        <LinkProjects href='https://github.com/HumbertoFox/intro-component-with-sign-up-form' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://github.com/HumbertoFox/donation-app/' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
@@ -201,7 +201,7 @@ export const ProjectsComponents = () => {
                         </LinkProjects>
                     </DivProjectsFront>
                     <DivProjectsBack className='back7'>
-                        <LinkProjects href='https://humbertofox.github.io/intro-component-with-sign-up-form/' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://donation-app-betofoxnet-info-projects.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>

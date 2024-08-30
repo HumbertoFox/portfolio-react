@@ -6,8 +6,8 @@ import BackGround2 from '/src/assets/background2.jpg';
 import BackGround3 from '/src/assets/background3.jpg';
 import BackGround4 from '/src/assets/background4.png';
 import BackGround5 from '/src/assets/background5.png';
-import BackGround6 from '/src/assets/background6.jpg';
-import BackGround7 from '/src/assets/background7.jpg';
+import BackGround6 from '/src/assets/background6.png';
+import BackGround7 from '/src/assets/background7.png';
 
 const SectionProjects = styled.section`
     min-height: 100vh;
