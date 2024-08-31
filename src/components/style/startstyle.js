@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const rightAnime = keyframes`
     0% {
@@ -48,6 +48,14 @@ const SectionStart = styled.section`
     align-items: center;
     padding: 0 15px;
     transition: .4s linear;
+    ${({ $checkedvalue }) => {
+        if ($checkedvalue) {
+            return css`
+                margin-top: 130px;
+                transition: .6s linear;
+            `;
+        }
+    }}
     @media (max-width: 900px) {
         justify-content: center;
         flex-wrap: wrap;

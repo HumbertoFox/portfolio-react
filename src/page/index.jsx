@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MainPage } from '../components/style/pagestyle';
 import { HeaderComponents } from '../components/header';
 import { StartComponents } from '../components/start';
@@ -7,10 +8,14 @@ import { ProjectsComponents } from '../components/project';
 import { FooterComponents } from '../components/footer';
 
 export const AppPage = () => {
+    const [isChecked, setIsChecked] = useState(false);
+    const handleCheckboxChange = (elenent) => {
+        setIsChecked(elenent);
+    };
     return (
         <MainPage>
-            <HeaderComponents />
-            <StartComponents />
+            <HeaderComponents onCheckboxChange={handleCheckboxChange} />
+            <StartComponents checkeds={isChecked} />
             <AboutComponents />
             <SkillsComponents />
             <ProjectsComponents />

@@ -1,14 +1,19 @@
 import LogoBtn from '../../assets/LOGOBFN.png';
 import { DivHeader, Header, LinkLogo, LinkNav, LogoImg, NavHeader } from '../style/headerstyle';
 
-export const HeaderComponents = () => {
+// eslint-disable-next-line react/prop-types
+export const HeaderComponents = ({ onCheckboxChange }) => {
+    const handleCheckboxChange = (event) => {
+        onCheckboxChange(event.target.checked);
+    };
+
     return (
         <Header>
             <LinkLogo title='Link Page Html, Css, Js' href='https://humbertofox.github.io/portfolio/' aria-label='Icon Logo'>
                 <LogoImg src={LogoBtn} alt='Logo BetoFoxNet_Info' />
             </LinkLogo>
             <DivHeader>
-                <input id='menu-hamburguer' type='checkbox' title='Menu' />
+                <input id='menu-hamburguer' type='checkbox' title='Menu' onChange={handleCheckboxChange} />
                 <label htmlFor='menu-hamburguer'>
                     <div>
                         <span></span>

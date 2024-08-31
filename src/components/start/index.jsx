@@ -4,7 +4,8 @@ import { faLinkedinIn, faWhatsapp, faGithub, faInstagram } from '@fortawesome/fr
 import { DivStartImg, DivStartSocial, PerfilImg, SectionDivStartImg, SectionDivStartText, SectionStart } from '../style/startstyle';
 import ImgPrefil from '../../assets/foto-perfil.png';
 
-export const StartComponents = () => {
+// eslint-disable-next-line react/prop-types
+export const StartComponents = ({ checkeds }) => {
     const selectStartAnimations = useRef({});
 
     useEffect(() => {
@@ -24,7 +25,7 @@ export const StartComponents = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <SectionStart ref={selectStartAnimations} className='animation' data-animation='up'>
+        <SectionStart ref={selectStartAnimations} className='animation' data-animation='up' $checkedvalue={checkeds}>
             <SectionDivStartText>
                 <p>Olá 🖖,</p>
                 <h1>Sou o Humberto Ribeiro</h1>
