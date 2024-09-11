@@ -216,11 +216,11 @@ const LinkNav = styled.a`
         color: #FFF;
         font-size: 1.2rem;
         font-weight: 500;
-        border-radius: 10px;
         letter-spacing: 1px;
-        padding: 1px;
         background: linear-gradient(45deg, #FFF, #00F, #0F0, #F00, #FFF);
         background-size: 400% 400%;
+        padding: 1px;
+        border-radius: 10px;
         animation: ${gradient} 4s linear infinite;
         :hover {
             color: #43BD8E;
