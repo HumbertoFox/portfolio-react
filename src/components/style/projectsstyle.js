@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import BackGroundFront from '/src/assets/backgroundfront.png';
 import BackGround0 from '/src/assets/background0.png';
 import BackGround1 from '/src/assets/background1.jpg';
-import BackGround2 from '/src/assets/background2.jpg';
+import BackGround2 from '/src/assets/background2.png';
 import BackGround3 from '/src/assets/background3.jpg';
 import BackGround4 from '/src/assets/background4.png';
 import BackGround5 from '/src/assets/background5.png';

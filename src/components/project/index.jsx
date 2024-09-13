@@ -76,7 +76,7 @@ export const ProjectsComponents = () => {
 
                 <DivDivProjects>
                     <DivProjectsFront>
-                        <LinkProjects href='https://github.com/HumbertoFox/Interactive-rating-component' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://github.com/HumbertoFox/pizzaria' target='_blank' rel='noopener'>
                             <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
                             <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                             <div>
@@ -86,7 +86,7 @@ export const ProjectsComponents = () => {
                         </LinkProjects>
                     </DivProjectsFront>
                     <DivProjectsBack className='back2'>
-                        <LinkProjects href='https://humbertofox.github.io/Interactive-rating-component/' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://pizzaria-beige-seven.vercel.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
