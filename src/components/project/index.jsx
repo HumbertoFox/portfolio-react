@@ -201,7 +201,7 @@ export const ProjectsComponents = () => {
                         </LinkProjects>
                     </DivProjectsFront>
                     <DivProjectsBack className='back7'>
-                        <LinkProjects href='https://donation-app-betofoxnet-info-projects.vercel.app/' target='_blank' rel='noopener'>
+                        <LinkProjects href='https://donation-app-appdoantions.up.railway.app/' target='_blank' rel='noopener'>
                             <FontAwesomeIcon icon={faGithub} />
                             <SpanDivLinks>Projeto de teste para o Frontend Mentor</SpanDivLinks>
                             <div>
