@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from "styled-components";
 
-const rightAnime = keyframes`
+const downAnime = keyframes`
     0% {
-        transform: translate3d(200%, 0, 0);
+        transform: translate3d(0, -200%, 0);
         opacity: 0;
     }
     100% {
@@ -14,6 +14,17 @@ const rightAnime = keyframes`
 const leftAnime = keyframes`
     0% {
 	  transform: translate3d(-200%, 0, 0);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translate3d(0, 0, 0);
+	  opacity: 1;
+	}
+`;
+
+const upAnime = keyframes`
+    0% {
+	  transform: translate3d(0, 200%, 0);
 	  opacity: 0;
 	}
 	100% {
@@ -42,7 +53,6 @@ const animateIcons = keyframes`
 
 const SectionStart = styled.section`
     min-height: calc(100vh - 130px);
-    top: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +80,6 @@ const SectionDivStartText = styled.div`
     gap: 20px;
     letter-spacing: 2px;
     cursor: default;
-    animation: ${rightAnime} .8s ease-in-out both;
     @media (max-width: 900px) {
         align-items: center;
         text-align: center;
@@ -91,10 +100,15 @@ const SectionDivStartText = styled.div`
     }
 `;
 
+const DivStartText = styled.div`
+    animation: ${upAnime} .8s ease-in-out both;
+`;
+
 const DivStartSocial = styled.div`
     display: flex;
     text-align: center;
     gap: 15px;
+    animation: ${downAnime} .8s ease-in-out both;
 
     a {
         display: flex;
@@ -131,7 +145,6 @@ const DivStartSocial = styled.div`
 const SectionDivStartImg = styled.div`
     display: flex;
     justify-content: end;
-    animation: ${leftAnime} .8s ease-in-out both;
     @media (max-width: 900px) {
         justify-content: center;
     }
@@ -147,6 +160,7 @@ const DivStartImg = styled.div`
     padding: 2px;
     border-radius: 100%;
     overflow: hidden;
+    animation: ${leftAnime} .8s ease-in-out both;
     &::before {
         width: 130%;
         height: 130%;
@@ -173,4 +187,4 @@ const PerfilImg = styled.img`
     z-index: 1;
 `;
 
-export { SectionStart, SectionDivStartText, DivStartSocial, SectionDivStartImg, DivStartImg, PerfilImg };
+export { SectionStart, SectionDivStartText, DivStartText, DivStartSocial, SectionDivStartImg, DivStartImg, PerfilImg };

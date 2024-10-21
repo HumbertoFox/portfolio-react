@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faWhatsapp, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { DivStartImg, DivStartSocial, PerfilImg, SectionDivStartImg, SectionDivStartText, SectionStart } from '../style/startstyle';
+import { DivStartImg, DivStartSocial, DivStartText, PerfilImg, SectionDivStartImg, SectionDivStartText, SectionStart } from '../style/startstyle';
 import ImgPrefil from '../../assets/foto-perfil.png';
 
 // eslint-disable-next-line react/prop-types
@@ -25,11 +25,13 @@ export const StartComponents = ({ checkeds }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <SectionStart ref={selectStartAnimations} className='animation' data-animation='up' $checkedvalue={checkeds}>
+        <SectionStart ref={selectStartAnimations} className='animation' data-animation='down' $checkedvalue={checkeds}>
             <SectionDivStartText>
-                <p>Olá 🖖,</p>
-                <h1>Sou o Humberto Ribeiro</h1>
-                <h2>Desenvolvedor Full-Stack</h2>
+                <DivStartText>
+                    <p>Olá 🖖,</p>
+                    <h1>Sou o Humberto Ribeiro</h1>
+                    <h2>Desenvolvedor Full-Stack</h2>
+                </DivStartText>
                 <DivStartSocial>
                     <a href='https://www.linkedin.com/in/humberto-ribeiro-sales/' aria-label='Icon para rede social linkedin' target='_blank' rel='noopener'><FontAwesomeIcon icon={faLinkedinIn} /></a>
                     <a href='https://api.whatsapp.com/send/?phone=5581988075408&text&type=phone_number&app_absent=0' aria-label='Icon para rede social WhatsApp' target='_blank' rel='noopener'><FontAwesomeIcon icon={faWhatsapp} /></a>
