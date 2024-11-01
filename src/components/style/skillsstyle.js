@@ -140,6 +140,7 @@ const Modal = styled.div`
 const ModalContent = styled.div`
     position: relative;
     width: 80%;
+    max-height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
