@@ -18,7 +18,7 @@ const projects = [
     {
         id: 'consultorio-app',
         github: 'https://github.com/HumbertoFox/consultorio-app',
-        live: 'https://consultorio-app.vercel.app/',
+        live: 'https://consultorio-app.vercel.app',
         description: 'Projeto desenvolvido com Next.js, CSS, TypeScript, PostgreSql >> Vercel <<',
         title: 'Projeto App Consultório'
     },
