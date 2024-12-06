@@ -1,5 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { BtnPlus, CloseButton, DivSectionSkills, LinkSkills, Modal, ModalContent, SectionSkills } from '../style/skillsstyle';
+import {
+    BtnPlus,
+    CloseButton,
+    DivSectionSkills,
+    LinkSkills,
+    Modal,
+    ModalContent,
+    SectionSkills
+} from '../style/skillsstyle';
 import {
     Html5Original,
     Css3Original,
@@ -17,6 +25,10 @@ import {
     LaravelOriginal,
     DockerOriginal,
 } from 'devicons-react';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const skillsData = [
     { icon: <Html5Original size='100' />, name: 'HTML5', description: 'HTML é a base fundamental para a criação de páginas web. Ele fornece a estrutura, a semântica e os elementos necessários para apresentar informações de forma organizada e acessível na web, além de permitir a criação de links e a incorporação de mídia. É uma linguagem essencial para qualquer desenvolvedor web!' },
@@ -41,29 +53,12 @@ export const SkillsComponents = () => {
     const [selectedSkill, setSelectedSkill] = useState(null);
     const [modalVisible, setModalVisible] = useState(false);
     const [isClose, setIsClose] = useState('false');
-    const selectSkillsAnimations = useRef({});
+    const skillsRef = useRef({});
+    const titleSkillsRef = useRef({});
+    const leftSkillsRef = useRef({});
+    const centerSkillsRef = useRef({});
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const windowSkillsTop = window.pageYOffset + window.innerHeight * .5;
-            const animationsSkills = selectSkillsAnimations.current.querySelectorAll('[data-animation]');
-
-            animationsSkills.forEach(animationSkills => {
-                if (windowSkillsTop > animationSkills.offsetTop) {
-                    animationSkills.classList.add('animation');
-                } else {
-                    animationSkills.classList.remove('animation');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const loadMoreSkills = () => {
-        setVisibleSkills(prevVisibleSkills => prevVisibleSkills + 3);
-    };
+    const loadMoreSkills = () => setVisibleSkills(prevVisibleSkills => prevVisibleSkills + 3);
 
     const handleSkillClick = (skill) => {
         setSelectedSkill(skill);
@@ -85,12 +80,67 @@ export const SkillsComponents = () => {
         }
     };
 
+    useEffect(() => {
+        const skills = skillsRef.current;
+        const titleSkills = titleSkillsRef.current;
+        const leftSkills = leftSkillsRef.current;
+        const centerSkills = centerSkillsRef.current;
+
+        gsap.fromTo(titleSkills, {
+            opacity: 0,
+            y: 200,
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: skills,
+                start: 'top center',
+            },
+        });
+
+        gsap.fromTo(leftSkills, {
+            opacity: 0,
+            x: -200,
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: skills,
+                start: 'top center',
+            },
+        });
+
+        gsap.fromTo(centerSkills, {
+            opacity: 0,
+            y: -200,
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: skills,
+                start: 'top center',
+            },
+        });
+
+    }, []);
     return (
-        <SectionSkills id='skills' ref={selectSkillsAnimations}>
-            <h4 className='animation' data-animation='up'>Habilidades</h4>
-            <DivSectionSkills className='animation' data-animation='left'>
+        <SectionSkills
+            id='skills'
+            ref={skillsRef}
+        >
+            <h4 ref={titleSkillsRef}>
+                Habilidades
+            </h4>
+
+            <DivSectionSkills ref={leftSkillsRef}>
                 {skillsData.slice(0, visibleSkills).map((skill, index) => (
-                    <LinkSkills key={index} onClick={() => handleSkillClick(skill)}>
+                    <LinkSkills
+                        key={index}
+                        onClick={() => handleSkillClick(skill)}
+                    >
                         {skill.icon}
                         <span>{skill.name}</span>
                         <p>{skill.description.substring(0, 66)}...</p>
@@ -98,7 +148,14 @@ export const SkillsComponents = () => {
                 ))}
             </DivSectionSkills>
             {visibleSkills < skillsData.length && (
-                <BtnPlus className='animation' data-animation='up' onClick={loadMoreSkills}><span>Carregar mais</span></BtnPlus>
+                <BtnPlus
+                    ref={centerSkillsRef}
+                    onClick={loadMoreSkills}
+                >
+                    <span>
+                        Carregar mais
+                    </span>
+                </BtnPlus>
             )}
             {modalVisible && selectedSkill && (
                 <Modal onClick={handleModalClick}>
@@ -106,7 +163,13 @@ export const SkillsComponents = () => {
                         <h2>{selectedSkill.name}</h2>
                         {selectedSkill.icon}
                         <p>{selectedSkill.description}</p>
-                        <CloseButton onClick={closeModal}><span>Fechar</span></CloseButton>
+                        <CloseButton
+                            onClick={closeModal}
+                        >
+                            <span>
+                                Fechar
+                            </span>
+                        </CloseButton>
                     </ModalContent>
                 </Modal>
             )}

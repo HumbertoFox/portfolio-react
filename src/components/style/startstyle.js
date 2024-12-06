@@ -1,38 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
 
-const downAnime = keyframes`
-    0% {
-        transform: translate3d(0, -200%, 0);
-        opacity: 0;
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
-`;
-
-const leftAnime = keyframes`
-    0% {
-	  transform: translate3d(-200%, 0, 0);
-	  opacity: 0;
-	}
-	100% {
-	  transform: translate3d(0, 0, 0);
-	  opacity: 1;
-	}
-`;
-
-const upAnime = keyframes`
-    0% {
-	  transform: translate3d(0, 200%, 0);
-	  opacity: 0;
-	}
-	100% {
-	  transform: translate3d(0, 0, 0);
-	  opacity: 1;
-	}
-`;
-
 const anime = keyframes`
     0% {
         transform: rotate(0deg);
@@ -101,14 +68,12 @@ const SectionDivStartText = styled.div`
 `;
 
 const DivStartText = styled.div`
-    animation: ${upAnime} .8s ease-in-out both;
 `;
 
 const DivStartSocial = styled.div`
     display: flex;
     text-align: center;
     gap: 15px;
-    animation: ${downAnime} .8s ease-in-out both;
 
     a {
         display: flex;
@@ -160,7 +125,6 @@ const DivStartImg = styled.div`
     padding: 2px;
     border-radius: 100%;
     overflow: hidden;
-    animation: ${leftAnime} .8s ease-in-out both;
     &::before {
         width: 130%;
         height: 130%;

@@ -13,6 +13,10 @@ import {
     SectionProjects,
     SpanDivLinks
 } from '../style/projectsstyle';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
@@ -72,34 +76,64 @@ const projects = [
         title: 'Projeto de Teste para Registro de Doações'
     },
 ];
+
 export const ProjectsComponents = () => {
-    const selectProjectsAnimations = useRef({});
+    const projectsRef = useRef({});
+    const titleProjectsRef = useRef({});
+    const centerProjectsRef = useRef({});
 
     useEffect(() => {
-        const handleScroll = () => {
-            const windowProjectsTop = window.pageYOffset + window.innerHeight * .5;
-            const animationsProjects = selectProjectsAnimations.current.querySelectorAll('[data-animation]');
-            animationsProjects.forEach(animationProjects => {
-                if (windowProjectsTop > animationProjects.offsetTop) {
-                    animationProjects.classList.add('animation');
-                } else {
-                    animationProjects.classList.remove('animation');
-                }
-            });
-        };
+        const projects = projectsRef.current;
+        const titleProjects = titleProjectsRef.current;
+        const centerProjects = centerProjectsRef.current;
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        gsap.fromTo(titleProjects, {
+            opacity: 0,
+            y: -200,
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: projects,
+                start: 'top center',
+            },
+        });
+
+        gsap.fromTo(centerProjects, {
+            opacity: 0,
+            y: 200,
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: projects,
+                start: 'top center',
+            },
+        });
     }, []);
     return (
-        <SectionProjects id='projects' ref={selectProjectsAnimations}>
-            <h5 className='animation' data-animation="up">Meus projetos</h5>
-            <DivSectionProjects className='animation' data-animation="left">
+        <SectionProjects
+            id='projects'
+            ref={projectsRef}
+        >
+            <h5 ref={titleProjectsRef}>
+                Meus projetos
+            </h5>
+            <DivSectionProjects ref={centerProjectsRef}>
                 {projects.map((project, index) => (
                     <DivDivProjects key={index}>
                         <DivProjectsFront>
-                            <LinkProjects href={project.github} target='_blank' rel='noopener'>
-                                <img src={LogoBfn} alt='Logo BetoFoxNet_Info' />
+                            <LinkProjects
+                                href={project.github}
+                                target='_blank'
+                                rel='noopener'
+                            >
+                                <img
+                                    src={LogoBfn}
+                                    alt='Logo BetoFoxNet_Info'
+                                />
                                 <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                                 <div>
                                     <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
