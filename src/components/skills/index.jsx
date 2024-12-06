@@ -25,10 +25,8 @@ import {
     LaravelOriginal,
     DockerOriginal,
 } from 'devicons-react';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-
-gsap.registerPlugin(ScrollTrigger);
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const skillsData = [
     { icon: <Html5Original size='100' />, name: 'HTML5', description: 'HTML é a base fundamental para a criação de páginas web. Ele fornece a estrutura, a semântica e os elementos necessários para apresentar informações de forma organizada e acessível na web, além de permitir a criação de links e a incorporação de mídia. É uma linguagem essencial para qualquer desenvolvedor web!' },
@@ -81,6 +79,8 @@ export const SkillsComponents = () => {
     };
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const skills = skillsRef.current;
         const titleSkills = titleSkillsRef.current;
         const leftSkills = leftSkillsRef.current;

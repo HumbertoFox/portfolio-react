@@ -16,8 +16,6 @@ import {
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const projects = [
     {
         id: 'consultorio-app',
@@ -83,6 +81,8 @@ export const ProjectsComponents = () => {
     const centerProjectsRef = useRef({});
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const projects = projectsRef.current;
         const titleProjects = titleProjectsRef.current;
         const centerProjects = centerProjectsRef.current;

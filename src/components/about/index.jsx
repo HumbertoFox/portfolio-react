@@ -12,8 +12,6 @@ import CurricuLum from '../../assets/file/cv.pdf';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export const AboutComponents = () => {
     const aboutRef = useRef({});
     const titleAboutRef = useRef({});
@@ -21,6 +19,8 @@ export const AboutComponents = () => {
     const textAboutRef = useRef({});
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const about = aboutRef.current;
         const titleAbout = titleAboutRef.current;
         const imageAbou = imageAboutRef.current;
