@@ -9,7 +9,9 @@ import { FooterComponents } from '../components/footer';
 
 export const AppPage = () => {
     const [isChecked, setIsChecked] = useState(false);
+    
     const handleCheckboxChange = elenent => setIsChecked(elenent);
+
     return (
         <MainPage>
             <HeaderComponents onCheckboxChange={handleCheckboxChange} />
