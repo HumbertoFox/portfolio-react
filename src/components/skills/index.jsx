@@ -55,6 +55,7 @@ export const SkillsComponents = () => {
     const titleSkillsRef = useRef({});
     const leftSkillsRef = useRef({});
     const centerSkillsRef = useRef({});
+    const skillsListRef = useRef([]);
 
     const loadMoreSkills = () => setVisibleSkills(prevVisibleSkills => prevVisibleSkills + 3);
 
@@ -101,10 +102,10 @@ export const SkillsComponents = () => {
 
         gsap.fromTo(leftSkills, {
             opacity: 0,
-            x: -200,
+            scale: 0.5,
         }, {
             opacity: 1,
-            x: 0,
+            scale: 1,
             duration: 1,
             scrollTrigger: {
                 trigger: skills,
@@ -126,6 +127,21 @@ export const SkillsComponents = () => {
         });
 
     }, []);
+
+    useEffect(() => {
+        if (visibleSkills > 3) {
+            gsap.fromTo(skillsListRef.current.slice(-3), {
+                opacity: 0,
+                y: 100
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                stagger: 0.2,
+            },
+            );
+        }
+    }, [visibleSkills]);
     return (
         <SectionSkills
             id='skills'
@@ -140,6 +156,7 @@ export const SkillsComponents = () => {
                     <LinkSkills
                         key={index}
                         onClick={() => handleSkillClick(skill)}
+                        ref={(el) => skillsListRef.current[index] = el}
                     >
                         {skill.icon}
                         <span>{skill.name}</span>

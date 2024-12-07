@@ -21,12 +21,12 @@ export const HeaderComponents = ({ onCheckboxChange }) => {
 
         gsap.fromTo(header, {
             opacity: 0,
-            y: -100
+            y: -100,
         }, {
             opacity: 1,
             y: 0,
-            ease: "bounce.out",
-            duration: 1.5
+            ease: 'bounce.out',
+            duration: 2,
         });
     }, []);
 

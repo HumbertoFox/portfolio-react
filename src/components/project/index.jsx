@@ -89,10 +89,12 @@ export const ProjectsComponents = () => {
 
         gsap.fromTo(titleProjects, {
             opacity: 0,
-            y: -200,
+            y: 200,
+            scale: 0.5,
         }, {
             opacity: 1,
             y: 0,
+            scale: 1,
             duration: 1,
             scrollTrigger: {
                 trigger: projects,
@@ -102,10 +104,10 @@ export const ProjectsComponents = () => {
 
         gsap.fromTo(centerProjects, {
             opacity: 0,
-            y: 200,
+            scale: 0.5,
         }, {
             opacity: 1,
-            y: 0,
+            scale: 1,
             duration: 1,
             scrollTrigger: {
                 trigger: projects,
@@ -136,18 +138,32 @@ export const ProjectsComponents = () => {
                                 />
                                 <SpanDivLinks>BetoFoxNet_Info</SpanDivLinks>
                                 <div>
-                                    <ParagraphPrimary>Projeto desenvolvido por Humberto Ribeiro 😎</ParagraphPrimary>
-                                    <ParagraphSecondary>🔗 GitHub Repositório</ParagraphSecondary>
+                                    <ParagraphPrimary>
+                                        Projeto desenvolvido por Humberto Ribeiro 😎
+                                    </ParagraphPrimary>
+                                    <ParagraphSecondary>
+                                        🔗 GitHub Repositório
+                                    </ParagraphSecondary>
                                 </div>
                             </LinkProjects>
                         </DivProjectsFront>
                         <DivProjectsBack className={`back${index}`}>
-                            <LinkProjects href={project.live} target='_blank' rel='noopener'>
+                            <LinkProjects
+                                href={project.live}
+                                target='_blank'
+                                rel='noopener'
+                            >
                                 <FontAwesomeIcon icon={faGithub} />
-                                <SpanDivLinks>{project.title}</SpanDivLinks>
+                                <SpanDivLinks>
+                                    {project.title}
+                                </SpanDivLinks>
                                 <div>
-                                    <ParagraphPrimary>{project.description}</ParagraphPrimary>
-                                    <ParagraphSecondary>🔗 Page</ParagraphSecondary>
+                                    <ParagraphPrimary>
+                                        {project.description}
+                                    </ParagraphPrimary>
+                                    <ParagraphSecondary>
+                                        🔗 Page
+                                    </ParagraphSecondary>
                                 </div>
                             </LinkProjects>
                         </DivProjectsBack>

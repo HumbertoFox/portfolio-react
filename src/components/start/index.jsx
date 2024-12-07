@@ -32,28 +32,55 @@ export const StartComponents = ({ checkeds }) => {
         gsap.fromTo(text, {
             opacity: 0,
             y: -300,
+            scale: 0.5,
         }, {
             opacity: 1,
             y: 0,
+            scale: 1,
             duration: 1,
         });
 
         gsap.fromTo(social, {
             opacity: 0,
             y: 300,
+            scale: 0.5,
         }, {
             opacity: 1,
             y: 0,
+            scale: 1,
             duration: 1,
         });
 
         gsap.fromTo(image, {
             opacity: 0,
             x: -500,
+            scale: 0.5,
         }, {
             opacity: 1,
             x: 0,
+            scale: 1,
             duration: 1,
+        });
+
+        const textContent = text.querySelector('h1').textContent;
+        const letters = textContent.split('');
+        text.querySelector('h1').innerHTML = '';
+        letters.forEach(letter => {
+            const span = document.createElement('span');
+            span.innerText = letter;
+            text.querySelector('h1').appendChild(span);
+        });
+
+        const spans = text.querySelectorAll('h1 span');
+        gsap.fromTo(spans, {
+            opacity: 0,
+            y: 100,
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power4.out',
         });
     }, []);
     return (
