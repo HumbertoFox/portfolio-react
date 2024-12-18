@@ -47,9 +47,9 @@ const SectionSkills = styled.section`
         font-family: 'Poppins', sans serif;
         font-size: 2.8rem;
         font-weight: 500;
-        text-transform: uppercase;
+        text-transform: capitalize;
         cursor: default;
-        color: #FFF;
+        color: #fff;
     }
 `;
 
@@ -72,23 +72,23 @@ const LinkSkills = styled.button`
     padding: 40px 20px;
     cursor: pointer;
     &:hover span {
-        color: #FFF;
+        color: #fff;
         transform: scale(1.1);
     }
     &:hover p {
-        color: #43BD8E;
+        color: #43bdff;
     }
 
     span {
         font-size: 1.8rem;
         font-family: 'Poppins', sans serif;
-        color: #43BD8E;
+        color: #43bdff;
         transition: all .4s ease-in-out;
     }
     p {
         font-size: 1.1rem;
         font-family: 'Raleway', sans serif;
-        color: #FFF;
+        color: #fff;
         transition: all .4s ease-in-out;
     }
 `;
@@ -98,11 +98,18 @@ const BtnPlus = styled.button`
     text-align: center;
     text-transform: capitalize;
     font-family: 'Poppins', sans serif;
-    color: #FFF;
+    color: #fff;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 1px;
-    background: linear-gradient(45deg, #FFF, #00F, #0F0, #F00, #FFF);
+    background: linear-gradient(
+        45deg,
+        #00f,
+        #282828,
+        #00f,
+        #282828,
+        #00f
+    );
     background-size: 400% 400%;
     cursor: pointer;
     padding: 1px;
@@ -110,8 +117,8 @@ const BtnPlus = styled.button`
     border: none;
     animation: ${gradient} 4s linear infinite;
     :hover {
-        color: #43BD8E;
-        text-shadow: 0 0 20px #00F;
+        color: #00f;
+        text-shadow: 0 0 20px #00f;
     }
     span {
         width: 100%;
@@ -145,7 +152,7 @@ const ModalContent = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    color: #FFF;
+    color: #fff;
     text-align: justify;
     background: #282828;
     padding: 20px;

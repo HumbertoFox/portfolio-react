@@ -75,9 +75,11 @@ export const StartComponents = ({ checkeds }) => {
         gsap.fromTo(spans, {
             opacity: 0,
             y: 100,
+            color: '#00f',
         }, {
             opacity: 1,
             y: 0,
+            color: '#fff',
             duration: 0.6,
             stagger: 0.1,
             ease: 'power4.out',

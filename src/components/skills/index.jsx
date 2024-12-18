@@ -1,4 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+    useEffect,
+    useRef,
+    useState
+} from 'react';
 import {
     BtnPlus,
     CloseButton,
@@ -47,7 +51,7 @@ const skillsData = [
 ];
 
 export const SkillsComponents = () => {
-    const [visibleSkills, setVisibleSkills] = useState(3);
+    const [visibleSkills, setVisibleSkills] = useState(6);
     const [selectedSkill, setSelectedSkill] = useState(null);
     const [modalVisible, setModalVisible] = useState(false);
     const [isClose, setIsClose] = useState('false');

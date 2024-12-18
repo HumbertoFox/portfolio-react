@@ -57,13 +57,13 @@ const SectionDivStartText = styled.div`
         font-family: 'Raleway', sans serif;
         font-size: 1.5rem;
         letter-spacing: 2px;
-        color: #FFF;
+        color: #fff;
     }
     h1 {
         font-family: 'Raleway', sans serif;
         font-size: 2.5rem;
         font-weight: 700;
-        color: #FFF;
+        color: #fff;
     }
 `;
 
@@ -103,7 +103,7 @@ const DivStartSocial = styled.div`
         transition: all .4s ease-in-out;
     }
     a:hover svg {
-        color: #FFF;
+        color: #fff;
     }
 `;
 
@@ -130,7 +130,14 @@ const DivStartImg = styled.div`
         height: 130%;
         position: absolute;
         content: '';
-        background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
+        background: repeating-conic-gradient(
+            #00f 0%,
+            #00f 5%,
+            #00f 10%,
+            transparent 5%,
+            transparent 40%,
+            #00f 50%
+        );
         animation: ${anime} 4s linear infinite;
     }
     &::after {
@@ -138,7 +145,14 @@ const DivStartImg = styled.div`
         height: 130%;
         position: absolute;
         content: '';
-        background: repeating-conic-gradient(#FF2770 0%, #FF2770 5%, #FF2770 10%, transparent 5%, transparent 40%, #FF2770 50%);
+        background: repeating-conic-gradient(
+            #00f 0%,
+            #00f 5%,
+            #00f 10%,
+            transparent 5%,
+            transparent 40%,
+            #00f 50%
+        );
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
     }
@@ -151,4 +165,12 @@ const PerfilImg = styled.img`
     z-index: 1;
 `;
 
-export { SectionStart, SectionDivStartText, DivStartText, DivStartSocial, SectionDivStartImg, DivStartImg, PerfilImg };
+export {
+    SectionStart,
+    SectionDivStartText,
+    DivStartText,
+    DivStartSocial,
+    SectionDivStartImg,
+    DivStartImg,
+    PerfilImg
+};

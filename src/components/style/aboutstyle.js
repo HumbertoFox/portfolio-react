@@ -22,7 +22,7 @@ const SectionAbout = styled.section`
         align-self: center;
         font-size: 2.8rem;
         font-weight: 500;
-        text-transform: uppercase;
+        text-transform: capitalize;
         cursor: default;
     }
     @media (max-width: 900px) {
@@ -57,7 +57,14 @@ const DivImgAbout = styled.div`
         height: 150%;
         position: absolute;
         content: '';
-        background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
+        background: repeating-conic-gradient(
+            #00f 0%,
+            #00f 5%,
+            #00f 10%,
+            transparent 5%,
+            transparent 40%,
+            #00f 50%
+        );
         animation: ${anime} 4s linear infinite;
     }
     &::after {
@@ -65,7 +72,14 @@ const DivImgAbout = styled.div`
         height: 150%;
         position: absolute;
         content: '';
-        background: repeating-conic-gradient(#FF2770 0%, #FF2770 5%, #FF2770 10%, transparent 5%, transparent 40%, #FF2770 50%);
+        background: repeating-conic-gradient(
+            #00f 0%,
+            #00f 5%,
+            #00f 10%,
+            transparent 5%,
+            transparent 40%,
+            #00f 50%
+        );
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
     }

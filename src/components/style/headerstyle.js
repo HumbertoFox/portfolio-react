@@ -63,7 +63,14 @@ const LinkLogo = styled.a`
         height: 130%;
         position: absolute;
         content: '';
-        background: repeating-conic-gradient(#45F3FF 0%, #45F3FF 5%, #45F3FF 10%, transparent 5%, transparent 40%, #45F3FF 50%);
+        background: repeating-conic-gradient(
+            #00f 0%,
+            #00f 5%,
+            #00f 10%,
+            transparent 5%,
+            transparent 40%,
+            #00f 50%
+        );
         animation: ${anime} 4s linear infinite;
         border-radius: 15px;
     }
@@ -72,14 +79,28 @@ const LinkLogo = styled.a`
         height: 130%;
         position: absolute;
         content: '';
-        background: repeating-conic-gradient(#FF2770 0%, #FF2770 5%, #FF2770 10%, transparent 5%, transparent 40%, #FF2770 50%);
+        background: repeating-conic-gradient(
+            #00f 0%,
+            #00f 5%,
+            #00f 10%,
+            transparent 5%,
+            transparent 40%,
+            #00f 50%
+        );
         animation: ${anime} 4s linear infinite;
         animation-delay: -1s;
         border-radius: 15px;
     }
     &:hover::before,
     &:hover::after {
-        background: repeating-conic-gradient(#FFD700 0%, #FFD700 5%, #FFD700 10%, transparent 5%, transparent 40%, #FFD700 50%);
+        background: repeating-conic-gradient(
+            #FFD700 0%,
+            #FFD700 5%,
+            #FFD700 10%,
+            transparent 5%,
+            transparent 40%,
+            #FFD700 50%
+        );
     }
 `;
 
@@ -109,7 +130,7 @@ const DivHeader = styled.div`
         display: block;
         top: 29px;
         left: 15px;
-        background-color: #FFF;
+        background-color: #fff;
         transition: all .5s ease-in-out;
     }
     label span::before,
@@ -119,7 +140,7 @@ const DivHeader = styled.div`
         position: absolute;
         display: block;
         content: '';
-        background-color: #FFF;
+        background-color: #fff;
         transition: all .2s ease-in-out;
     }
     label span::before {
@@ -175,18 +196,18 @@ const LinkNav = styled.a`
         text-align: center;
         text-transform: capitalize;
         font-family: 'Poppins', sans serif;
-        color: #FFF;
+        color: #fff;
         font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: 1px;
-        background: linear-gradient(45deg, #FFF, #00F, #0F0, #F00, #FFF);
+        background: linear-gradient(45deg, #00f, #282828, #00f, #282828, #00f);
         background-size: 400% 400%;
         padding: 1px;
         border-radius: 10px;
         animation: ${gradient} 4s linear infinite;
         :hover {
-            color: #43BD8E;
-            text-shadow: 0 0 20px #00F;
+            color: #00f;
+            text-shadow: 0 0 20px #00f;
         }
 
         span {
@@ -198,4 +219,11 @@ const LinkNav = styled.a`
         }
 `;
 
-export { Header, LinkLogo, LogoImg, DivHeader, NavHeader, LinkNav };
+export {
+    Header,
+    LinkLogo,
+    LogoImg,
+    DivHeader,
+    NavHeader,
+    LinkNav
+};
