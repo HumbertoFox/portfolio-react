@@ -67,11 +67,11 @@ const projects = [
         title: 'Projeto de teste Consumo de Api'
     },
     {
-        id: 'donationsnext-app',
-        github: 'https://github.com/HumbertoFox/curso-laravel',
-        live: 'https://curso-laravel-production.up.railway.app/',
-        description: 'Projeto desenvolvido com Laravel + vite HTML, CSS, PHP, BootStrap, PostgreSql >> Railway <<',
-        title: 'Projeto de Teste para Registro de Doações'
+        id: 'cruzado-d3-app',
+        github: 'https://github.com/HumbertoFox/cruzado-d3-app',
+        live: 'https://cruzado-d3-app.vercel.app/',
+        description: 'Projeto desenvolvido com React + NextJs HTML, CSS, Tailwind >> Vercel <<',
+        title: 'Projeto de Teste para Page de Cruzado D3'
     },
 ];
 
