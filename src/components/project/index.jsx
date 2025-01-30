@@ -39,9 +39,9 @@ const projects = [
         title: 'Projeto de Teste Pessoal de Pizzaria'
     },
     {
-        id: 'project-Donations',
-        github: 'https://github.com/HumbertoFox/donations-app',
-        live: 'https://donations-app-donationsapp.up.railway.app/',
+        id: 'project-bfn-mlu-next-app',
+        github: 'https://github.com/HumbertoFox/bfn-mlu-next-app',
+        live: 'https://bfn-mlu-next-app.vercel.app/',
         description: 'Projeto desenvolvido com Framework, Laravel + Vite, Tailwind e PostgreSql, >> Railway <<',
         title: 'Projeto pessoal gestão de coleta de Doações'
     },
