@@ -81,6 +81,7 @@ export const StartComponents = ({ checkeds }) => {
             y: 0,
             color: '#fff',
             duration: 0.6,
+            repeat: -1,
             stagger: 0.1,
             ease: 'power4.out',
         });
